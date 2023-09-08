@@ -5,11 +5,14 @@ curso para o bacharelado em psicologia na PUCRS.
 
 ## Escolha do tema
 
-Algumas ideias de tema de pesquisa.
+Algumas ideias para tema de pesquisa.
 
-### Ideia 1
+### Educação, dinheiro e psicoterapia
 
-Uma bela ideia.
+Investigar como fatores socioeconômicos, como nível de escolaridade e renda, estão
+relacionados com desfechos de uma intervenção de psicoterápica.
+
+[Dados abertos de um estudo sobre a eficácia de intervenção.](https://openpsychologydata.metajnl.com/articles/10.5334/jopd.35)
 
 ### Ideia 2
 
