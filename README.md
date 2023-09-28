@@ -29,3 +29,58 @@ relacionados com desfechos de uma intervenção psicoterápica.
 Investigar a relação entre estilo pessoal da psicoterapeuta e os defechos de uma
 intervenção psicoterápica.
 
+### Fichamento de artigos
+
+## Predicting individual response to a web-based positive psychology intervention: a machine learning approach
+
+### Autores
+Amanda C. Collins, George D. Price, Rosalind J. Woodworth e Nicholas C. Jacobson
+
+### Ano
+2023
+
+### Problema
+Intervenções em psicologia positiva mostram-se efetivas no tratamento de sintomas
+depressivos e aumento da felicidade, mas nem todos pacientes respondem conforme o
+esperado. É importante identificar indivíduos com menores chances de resposta a esse
+tipo de intervenção para que possam ser encaminhados a outros tipos de tratamentos.
+
+### Objetivo
+Investigar se características individuais seriam capazes de prever modificações nos
+sintomas depressivos e na felicidade de uma pessoa após a participação em uma intervenção
+de psicologia positiva on-line. Investigar também se essas mesmas características
+conseguem prever uma mudança sustentada após um período de seis meses.
+
+### Metodologia
+
+#### Participantes
+Participaram 295 cidadãos australianos recrutados através de anúncios em jornais, rádios,
+televisão e artigos da internet para participar de um estudo sobre felicidade. Eles completaram
+um questionário com informações demográficas e preencheram escalas de felicidade e sintomas
+depressivos, formando a observação de base.
+
+#### Intervenção
+Os participantes foram distribuídos aleatoriamente em 4 grupos: 3 grupos de intervenção
+(gratidão, forças de caráter e três coisas boas) e um grupo de controle ativo (memórias de
+antigas). Cada grupo recebeu um e-mail com um conjunto de instruções específicas:
+
+- Gratidão: escrever uma carta agradecendo uma pessoa que teve influência positiva em
+sua vida mas nunca foi agradecida.
+
+- Forças de caráter: preencher um questionário para identificação das forças de caráter,
+ler as descrições de cada uma delas e buscar aplicá-las ao longo da semana.
+
+- Três coisas boas: anotar três coisas boas que aconteceram ao longo do dia e explicar
+por que elas aconteceram.
+
+- Memórias antigas: escrever memórias antigas ao final do dia.
+
+#### Desfechos
+
+Foram observados os níveis
+
+
+### Resultados
+
+### Limitações
+
