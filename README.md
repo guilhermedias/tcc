@@ -29,37 +29,37 @@ relacionados com desfechos de uma intervenção psicoterápica.
 Investigar a relação entre estilo pessoal da psicoterapeuta e os defechos de uma
 intervenção psicoterápica.
 
-### Fichamento de artigos
+## Fichamento de artigos
 
-## Predicting individual response to a web-based positive psychology intervention: a machine learning approach
+### Predicting individual response to a web-based positive psychology intervention: a machine learning approach
 
-### Autores
+#### Autores
 Amanda C. Collins, George D. Price, Rosalind J. Woodworth e Nicholas C. Jacobson
 
-### Ano
+#### Ano
 2023
 
-### Problema
+#### Problema
 Intervenções em psicologia positiva mostram-se efetivas no tratamento de sintomas
 depressivos e aumento da felicidade, mas nem todos pacientes respondem conforme o
 esperado. É importante identificar indivíduos com menores chances de resposta a esse
 tipo de intervenção para que possam ser encaminhados a outros tipos de tratamentos.
 
-### Objetivo
+#### Objetivo
 Investigar se características individuais seriam capazes de prever modificações nos
 sintomas depressivos e na felicidade de uma pessoa após a participação em uma intervenção
 de psicologia positiva on-line. Investigar também se essas mesmas características
 conseguem prever uma mudança sustentada após um período de seis meses.
 
-### Metodologia
+#### Metodologia
 
-#### Participantes
+##### Participantes
 Participaram 295 cidadãos australianos recrutados através de anúncios em jornais, rádios,
 televisão e artigos da internet para participar de um estudo sobre felicidade. Eles completaram
 um questionário com informações demográficas e preencheram escalas de felicidade e sintomas
 depressivos, formando a observação de base.
 
-#### Intervenção
+##### Intervenção
 Os participantes foram distribuídos aleatoriamente em 4 grupos: 3 grupos de intervenção
 (gratidão, forças de caráter e três coisas boas) e um grupo de controle ativo (memórias de
 antigas). Cada grupo recebeu um e-mail com um conjunto de instruções específicas:
@@ -75,12 +75,12 @@ por que elas aconteceram.
 
 - Memórias antigas: escrever memórias antigas ao final do dia.
 
-#### Desfechos
+##### Desfechos
 
 Foram observados os níveis
 
 
-### Resultados
+##### Resultados
 
-### Limitações
+##### Limitações
 
