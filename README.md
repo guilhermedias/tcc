@@ -47,17 +47,15 @@ tipo de intervenção para que possam ser encaminhados a outros tipos de tratame
 
 #### Objetivo
 Investigar se características individuais seriam capazes de prever modificações nos
-sintomas depressivos e na felicidade de uma pessoa após a participação em uma intervenção
-de psicologia positiva on-line. Investigar também se essas mesmas características
-conseguem prever uma mudança sustentada após um período de seis meses.
+níveis de felicidade e de sintomas depressivos de uma pessoa após a participação em
+uma intervenção de psicologia positiva on-line; investigar quais características do
+indivíduo tem maior contribuição para previsão do desfecho.
 
 #### Metodologia
 
 ##### Participantes
 Participaram 295 cidadãos australianos recrutados através de anúncios em jornais, rádios,
-televisão e artigos da internet para participar de um estudo sobre felicidade. Eles completaram
-um questionário com informações demográficas e preencheram escalas de felicidade e sintomas
-depressivos, formando a observação de base.
+televisão e artigos da internet para participar de um estudo sobre felicidade.
 
 ##### Intervenção
 Os participantes foram distribuídos aleatoriamente em 4 grupos: 3 grupos de intervenção
@@ -75,12 +73,40 @@ por que elas aconteceram.
 
 - Memórias antigas: escrever memórias antigas ao final do dia.
 
-##### Desfechos
+##### Desfechos observados
 
-Foram observados os níveis
+Foram observados os níveis de felicidade e sintomas depressivos conforme avaliados pelos
+instrumentos *Authentic happiness inventory* (AHI) e *Center for epidemiologic studies
+depression scale* (CES-D) respectivamente.
 
+##### Procedimentos
+Os participantes completaram um questionário com informações demográficas e preencheram
+escalas de felicidade e sintomas depressivos, formando a observação de base.  Eles então
+passaram pela intervenção que teve duração de uma semana. Os níveis de felicidade e sintomas
+depressivos dos participantes foram avaliados imediatamente, uma semana, um mês, três meses
+e seis meses após o fim da intervenção.
+
+##### Plano de análise de dados
+
+Foram treinados modelos de machine learning do tipo *extreme gradient boosted tree*, um para
+cada comparação entre dados de base e pós-teste e para cada uma das medidas (AHI e CES-D),
+totalizando 10 modelos. Foi usada a abordagem *leave-one-out cross-validation* (70%/30%) para
+avaliação do desempenho dos modelos. 
+
+Empregaram também o procedimento de *Shapley additive explanations* (SHAP) para estimar a
+contribuição de cada característica da entrada no desfecho previsto pelo modelo e elencaram
+as 5 características mais releventes para a previsão.
 
 ##### Resultados
+Os pesquisadores encontraram correlação moderada entre os dados reais e as previsões do
+modelo para níveis de felicidade (r = 0.30) e sintomas depressivos (r = 0.39) avaliados
+seis meses após o fim da intervenção. Em ambos os casos, características clínicas (avaliadas
+pelo AHI e CES-D no pré-teste) tiveram maior contribuição para a previsão do desfecho.
 
 ##### Limitações
+
+A amostra era pequena e consistia majoritariamente de pessoas com níveis não-clínicos de
+depressão, o que limita a possibilidade de generalização dos modelos para populações clínicas.
+Não foram examinados fatores importantes que podem ter contribuído para os resultados da
+intervenção, como nível de engajamento dos participantes.
 
