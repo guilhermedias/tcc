@@ -110,3 +110,75 @@ depressão, o que limita a possibilidade de generalização dos modelos para pop
 Não foram examinados fatores importantes que podem ter contribuído para os resultados da
 intervenção, como nível de engajamento dos participantes.
 
+
+### Predicting therapy outcome in a digital mental health intervention for depression and anxiety: A machine learning approach
+
+#### Autores
+
+Silvan Hornstein, Valerie Forman-Hoffman, Albert Nazander, Kristian Ranta e Kevin Hilbert.
+
+#### Ano
+2021
+
+#### Problema
+
+Embora a necessidade de tratamentos individualizados em saúde mental seja cada mais reconhecida,
+ainda existem poucos trabalhos que avaliam a viabilidade do uso de algoritmos de *machine
+learning* para fazer previsões sobre a resposta a intervenções a nível individual.
+
+
+#### Objetivo
+
+Avaliar o desempenho de algoritmos de *machine learning* na previsão dos resultados de uma
+intervenção digital em saúde mental projetada para o tratamento de ansiedade e depressão.
+
+#### Metodologia
+
+##### Participantes
+
+Foram coletados dados anônimos de 970 pessoas usuárias do *Meru Health Program* (as pessoas
+consentiram com o uso dos dados anonimizados para realização de pesquisa ao ingressar no programa).
+
+##### Intervenção
+
+O *Meru Health Program* é um programa digital em saúde mental com foco em ansiedade e depressão
+realizado via smartphone. A intervenção consiste na aplicação técnicas de TCC, psicoeducação,
+exercícios de mindfulness e biofeedback ao longo de um período que varia entre 8 e 12 semanas.
+Os participantes são acompanhados por psicoterapeutas clínicos licenciados que revisam engajamento
+e resultados e mantém contato assíncrono frequente por meio de mensagens.
+
+##### Desfechos observados
+
+Os resultados da intervenção foram acompanhados com a aplicação dos instrumentos *Patient Health
+Questionaire-9* (PHQ-9) e *General Anxiety Disorder Screener-7* (GAD-7) a cada duas semanas. O
+principal desfecho de interesse foi uma variável binária de resposta/não resposta à intervenção,
+definida como uma redução significativa nos sintomas de ansiedade ou depressão (redução de pelo
+menos 5 pontos na PHQ-9 ou pelo menos 4 pontos na GAD-7).
+
+##### Plano de análise de dados
+
+Usando dados clínicos de uma primeira aplicação do PHQ-9, do GAD-7 bem como dados demográficos,
+Foram treinados modelos de *machine learning* dos tipos: regressão logística, *support vector
+machine*, *naive Bayes* e *random forest* (RF). A performance dos modelos foi avaliada usando a técnica
+de *10-fold cross-validation* e o método de imputação de dados utilizado para cada modelo foi avaliado e
+selecionado como parte do processo de *cross-validation*. O ajuste de hiper-parâmetros foi feito
+usando o método de *exhaustive grid search*. O principal indicador de performance dos modelos na
+fase de *cross-validation* foi a medida de *receiver operating characteristics area under curve*
+(ROC AUC).
+
+##### Resultados
+
+Na etapa de *cross-validaiton* o algoritimo RF apresentou o melhor resultado (ROC AUC = 0.64) e
+foi utilizado em uma rodada de teste contra um conjunto de 279 novas observações, obtendo uma
+precisão não balanceada de 0.71 com ROC AUC de 0.60. Observou-se que participantes classificados
+como respondentes à intervenção tiveram uma redução média de 5,1 pontos do PHQ-9 e 5,5 no GAD-7,
+enquanto os não respondentes tiveram reduções médias de 2,4 e 1,8 respectivamente.
+
+##### Limitações
+
+A quantidade de dados faltantes era considerável e provavelmente não aleatória, o que limita
+o desempenho de técnicas de imputação de dados. Os dados de testes usados na etapa final
+foram coletados de uma população diferente da que gerou os dados de treinamento, podendo
+ter prejudicado o desempenho preditivo dos modelos. O estudo não contou com uma base de comparação
+realista (aqui autores sugerem comparar a precisão dos modelos com o julgamento de clínicos).
+
