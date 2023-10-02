@@ -34,18 +34,22 @@ intervenção psicoterápica.
 ### Predicting individual response to a web-based positive psychology intervention: a machine learning approach
 
 #### Autores
-Amanda C. Collins, George D. Price, Rosalind J. Woodworth e Nicholas C. Jacobson
+
+Amanda C. Collins, George D. Price, Rosalind J. Woodworth e Nicholas C. Jacobson.
 
 #### Ano
-2023
+
+2023.
 
 #### Problema
+
 Intervenções em psicologia positiva mostram-se efetivas no tratamento de sintomas
 depressivos e aumento da felicidade, mas nem todos pacientes respondem conforme o
 esperado. É importante identificar indivíduos com menores chances de resposta a esse
 tipo de intervenção para que possam ser encaminhados a outros tipos de tratamentos.
 
 #### Objetivo
+
 Investigar se características individuais seriam capazes de prever modificações nos
 níveis de felicidade e de sintomas depressivos de uma pessoa após a participação em
 uma intervenção de psicologia positiva on-line; investigar quais características do
@@ -54,10 +58,12 @@ indivíduo tem maior contribuição para previsão do desfecho.
 #### Metodologia
 
 ##### Participantes
+
 Participaram 295 cidadãos australianos recrutados através de anúncios em jornais, rádios,
-televisão e artigos da internet para participar de um estudo sobre felicidade.
+televisão e artigos da Internet para participar de um estudo sobre felicidade.
 
 ##### Intervenção
+
 Os participantes foram distribuídos aleatoriamente em 4 grupos: 3 grupos de intervenção
 (gratidão, forças de caráter e três coisas boas) e um grupo de controle ativo (memórias de
 antigas). Cada grupo recebeu um e-mail com um conjunto de instruções específicas:
@@ -80,6 +86,7 @@ instrumentos *Authentic happiness inventory* (AHI) e *Center for epidemiologic s
 depression scale* (CES-D) respectivamente.
 
 ##### Procedimentos
+
 Os participantes completaram um questionário com informações demográficas e preencheram
 escalas de felicidade e sintomas depressivos, formando a observação de base.  Eles então
 passaram pela intervenção que teve duração de uma semana. Os níveis de felicidade e sintomas
@@ -98,6 +105,7 @@ contribuição de cada característica da entrada no desfecho previsto pelo mode
 as 5 características mais releventes para a previsão.
 
 ##### Resultados
+
 Os pesquisadores encontraram correlação moderada entre os dados reais e as previsões do
 modelo para níveis de felicidade (r = 0.30) e sintomas depressivos (r = 0.39) avaliados
 seis meses após o fim da intervenção. Em ambos os casos, características clínicas (avaliadas
@@ -118,7 +126,8 @@ intervenção, como nível de engajamento dos participantes.
 Silvan Hornstein, Valerie Forman-Hoffman, Albert Nazander, Kristian Ranta e Kevin Hilbert.
 
 #### Ano
-2021
+
+2021.
 
 #### Problema
 
@@ -181,4 +190,87 @@ o desempenho de técnicas de imputação de dados. Os dados de testes usados na 
 foram coletados de uma população diferente da que gerou os dados de treinamento, podendo
 ter prejudicado o desempenho preditivo dos modelos. O estudo não contou com uma base de comparação
 realista (aqui autores sugerem comparar a precisão dos modelos com o julgamento de clínicos).
+
+
+### A machine learning ensemble to predict treatment outcomes following an Internet intervention for depression
+
+#### Autores
+
+Rahel Pearson, Derek Pisner, Björn Meyer, Jason Shumake e Christopher G. Beevers.
+
+#### Ano
+
+2019.
+
+#### Problema
+
+Estudos apontam a eficácia de intervenções realizadas por Internet, mas poucos investigam a
+resposta ao tratamento em nível individual.
+
+#### Objetivo
+
+Aplicar técnicas de *machine learning* para prever resultados de uma intervenção psicológica
+voltada ao tratamento de depressão e realizada via Internet.
+
+#### Metodologia
+
+##### Participantes
+
+Os dados foram coletados como parte do ensaio clínico que avaliava a eficácia do programa
+Deprexis. Participaram do ensaior pessoas entre 18 e 55 anos que apresentassem sintomas moderados
+ou mais graves de depressão (pontuação >= a 10 no instrumento QIDS).
+
+##### Intervenção
+
+O Deprexis é um tratamento para transtorno depressivo maior realizado via Internet e que
+conta com um nível relativamente baixo de suporte de terapeutas. A intervenção consiste em
+10 módulos de conteúdo cobrindo tópicos como ativação comportamental, reestruturação cognitva
+exercícios de relaxamento, mindfulness e outros.
+
+##### Desfechos observados
+
+Foram observados os níveis de sintomas depressivos por meio dos instrumentos *Hamilton
+Rating Scale for Depression* (HRSD), *Sheehan Disability Scale* (SDS) e a subescala
+*Well-Being* do *Inventory of Depressive Symptoms* (IDAS Well-Being).
+
+##### Plano de análise de dados
+
+Os modelos de *machine learning* dos tipos *elastic net* e *random forest* foram treinados
+utilizando dados clínicos e demográficos coletados antes da intervenção. A performance dos
+modelos foi avaliada durante o treinamento usando a técnica de *nested cross-validation* ; o
+método foi escolhido para evitar viéses otimistas observados em técnicas tradicionais de
+*cross-validation* com amostras pequenas.
+
+As previsões dos modelos foram então combinadas usando uma média aritmética simples, gerando
+a previsão final do conjunto de modelos. O desempenho do conjunto de modelos foi comparado a
+de um modelo de regressão linear treinado com o mesmo conjunto de dados (modelo de *benchmark*),
+buscando observar as diferenças na variâncias explicadas pelas duas abordagens (o que os autores
+chamam de 'ganho do modelo').
+
+Os autores também avaliaram a importância de cada preditor inserido no modelo por meio de uma
+ténica similar a SHAP, alterando o valor de uma variável por vez e observando as diferenças
+produziadas no resultado.
+
+Dados faltantes foram imputados usando a técnica de *miss forest*, que utilizada uma combinação
+de regressões lineares e um algoritmo de *random forest* para gerar um valor artificial.
+
+##### Resultados
+
+O modelo de *benchmark* explicou 16,6% da variância observada nos resultados do HRSD; o conjunto
+de modelos desenvolvidos explicou um adicional de 8%. Os preditores mais importantes foram: a
+pontuação em escalas de depressão antes da intervenção, comorbidades, nível de funcionamento, nível
+de engajamento com os módulos do Deprexis, credibilidade atribuída ao tratamento e disponibilidade
+de terapeutas.
+
+O conjunto de modelos também apresentou ganhos ao explicar a variância no nível de funcionamento e
+no bem-estar dos participantes.
+
+Ao analisar importância do uso de cada módulo do Deprexis, os autores observaram maior contribuição
+dos módulos de relaxamento, aceitação, relacionamentos e reestruturação cognitiva.
+
+##### Limitações
+
+A amostra usada no estudo era pequena e relativamente homogênea, levando a um possível *overfitting*
+do modelo aos dados. Sem acesso a dados de intervenções comparáveis, não é prever a respostas da
+intervenção Deprexis em relação a uma alternativa.
 
