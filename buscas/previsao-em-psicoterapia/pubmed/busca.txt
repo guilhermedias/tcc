@@ -1,0 +1,10 @@
+("prevision"          [Title/Abstract]) AND
+("machine learning"   [Title/Abstract]) AND
+(psychotherapy        [Title/Abstract]) AND
+
+(Journal Article      [Publication Type])
+
+(2019:2024            [Publication Date])
+
+(English              [Language])
+
