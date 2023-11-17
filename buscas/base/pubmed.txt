@@ -1,9 +1,8 @@
-("search term 1"  [Title/Abstract]) AND
-("search term 2"  [Title/Abstract]) AND
+("search term 1" [MeSH Terms] OR "search term 1" [Title/Abstract]) AND
+("search term 2" [MeSH Terms] OR "search term 2" [Title/Abstract]) AND
 
 (Journal Article  [Publication Type])
 
 (2019:2024        [Publication Date])
 
 (English          [Language])
-

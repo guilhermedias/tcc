@@ -273,4 +273,3 @@ dos módulos de relaxamento, aceitação, relacionamentos e reestruturação cog
 A amostra usada no estudo era pequena e relativamente homogênea, levando a um possível *overfitting*
 do modelo aos dados. Sem acesso a dados de intervenções comparáveis, não é prever a respostas da
 intervenção Deprexis em relação a uma alternativa.
-

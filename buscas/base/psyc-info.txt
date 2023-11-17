@@ -1,5 +1,5 @@
-(Title: "search term 1" OR Abstract: "search term 1") AND
-(Title: "search term 2" OR Abstract: "search term 2") AND
+(IndexTerms: "search term 1" OR Title: "search term 1" OR Abstract: "search term 1") AND
+(IndexTerms: "search term 2" OR Title: "search term 2" OR Abstract: "search term 2") AND
 
 (PublicationType: Peer-Reviewed Journal) AND
 
@@ -13,4 +13,3 @@
 ) AND
 
 (Language: English)
-

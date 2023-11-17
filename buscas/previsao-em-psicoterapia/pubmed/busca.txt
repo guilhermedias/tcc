@@ -1,10 +1,10 @@
-("prevision"          [Title/Abstract]) AND
-("machine learning"   [Title/Abstract]) AND
-(psychotherapy        [Title/Abstract]) AND
+(Psychotherapy                  [MeSH Terms]) AND
+("Treatment Outcome"            [MeSH Terms]) AND
+("Machine Learning"             [MeSH Terms]
+  OR "Artificial Intelligence"  [MeSH Terms]) AND
 
 (Journal Article      [Publication Type])
 
 (2019:2024            [Publication Date])
 
 (English              [Language])
-

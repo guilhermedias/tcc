@@ -1,6 +1,6 @@
-(Title: "prevision" OR Abstract: "prevision") AND
-(Title: "machine learning" OR Abstract: "machine learning") AND
-(Title: psychotherapy OR Abstract: psychotherapy) AND
+(IndexTerms: "Psychotherapeutic Outcomes" OR IndexTerms: "Treatment Outcomes") AND
+(IndexTerms: "Machine Learning" OR IndexTerms: "Artificial Intelligence") AND
+(IndexTerms: "Prediction") AND
 
 (PublicationType: Peer-Reviewed Journal) AND
 
@@ -14,4 +14,3 @@
 ) AND
 
 (Language: English)
-
