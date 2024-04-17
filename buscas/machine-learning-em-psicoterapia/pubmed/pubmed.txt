@@ -1,0 +1,10 @@
+(Psychotherapy                  [MeSH Terms]) AND
+
+("Machine Learning"             [MeSH Terms]
+  OR "Artificial Intelligence"  [MeSH Terms]) AND
+
+(Journal Article      [Publication Type])
+
+(2019:2024            [Publication Date])
+
+(English              [Language])

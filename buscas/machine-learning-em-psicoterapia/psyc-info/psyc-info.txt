@@ -1,0 +1,15 @@
+(IndexTerms: "search term 1" OR Title: "search term 1" OR Abstract: "search term 1") AND
+(IndexTerms: "search term 2" OR Title: "search term 2" OR Abstract: "search term 2") AND
+
+(PublicationType: Peer-Reviewed Journal) AND
+
+(DocumentType: Journal Article) AND
+
+(PublicationDate: 2019 OR
+  PublicationDate: 2020 OR
+  PublicationDate: 2021 OR
+  PublicationDate: 2022 OR
+  PublicationDate: 2023
+) AND
+
+(Language: English)
