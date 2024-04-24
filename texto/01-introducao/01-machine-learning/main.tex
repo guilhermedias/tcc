@@ -1,28 +1,39 @@
 \subsection{O que é machine learning?}
 
 Aprendizagem de máquina é a área da ciência da computação que tem por objetivo o desenvolvimento
-de aplicações capazes de aprender estratégias para execução de uma determinada tarefa a partir de
-experiências, diferenciando-se de sistemas tradicionais onde o comportamento deve ser pré-programado.
+de aplicações capazes de aprender estratégias para execução de uma determinada tarefa a partir da
+exposição a informações relevantes, diferenciando-se de sistemas tradicionais onde o comportamento
+deve ser pré-programado (Bi, 2019). Aplicações baseadas em aprendizagem de máquina são capazes de
+identificar padrões de interação complexos entre variáveis de um conjunto de dados com alta dimensionalidade
+para realizar tarefas de classificação, regressão, agrupamento e outros (Delgadillo, 2021).
 
 Por trás dessas aplicações, encontram-se modelos computacionais com múltiplos parâmetros e o processo de
-aprendizgem consiste em encontrar um conjunto de parâmetros que produz os melhores resultados para a tarefa
-em questão. Nesse sentido, a aprendizagem de máquina, aproxima-se de métodos estatísticos tradicionais como
-regressões.
+aprendizagem consiste em encontrar um conjunto de parâmetros que produz os melhores resultados para a tarefa
+em questão; nesse sentido, a aprendizagem de máquina aproxima-se de métodos estatísticos tradicionais. A diferenciação
+entre métodos estatísticos e de aprendizagem de máquina é feita, muitas vezes, com base em critérios históricos,
+mas é possível identificar características próprias das abordagens de aprendizagem de máquina: ao contrário da abordagem
+estatística inferencial, por exemplo, a aprendizagem de máquina não assume nenhuma relação entre variáveis; em certa medida,
+pode-se dizer que é uma abordagem agnóstica de teoria (Bi, 2019; Delgadillo, 2021).
 
-\subsection{Quais os tipos de machine learning?}
+\subsection{Quais os tipos de técnicas de machine learning?}
 As diferentes técnicas de aprendizagem de máquina podem ser classificadas de acordo com a estratégia adotada
-para o processo de aprendizagem. As principais categegorias são: aprendizagem supervisionada, aprendizagem não
+durante o processo de aprendizagem. As principais categegorias são: aprendizagem supervisionada, aprendizagem não
 supervisionada e aprendizagem por reforço.
 
 \subsubsection{Supervisionada}
-Na aprendizagem supervisionada, o processo de aprendizagem consiste em expor o modelo a um conjunto de observações
-rotuladas.
+Na aprendizagem supervisionada, a aplicação é exposta a um conjunto de dados que contém informações sobre o desfecho
+adequado para cada uma das observações. Técnicas de aprendizagem de máquina populares para tarefas de classificação e 
+regressão (support vector machines, árvores de decisão, redes neurais) pertencem a esta categoria.
 
 \subsubsection{Não supervisionada}
-Na aprendizagem supervisionada, o processo de aprendizagem consiste em expor o modelo a um conjunto de observações
-não rotuladas.
+Na aprendizagem não supervisionada, o conjunto de dados analisado não contém informações sobre o desfecho adequado para
+as observações. A aplicação é responsável por identificar, de maneira autônoma, os padrões de relação e similaridades existentes
+no conjunto de dados. Técnicas de aprendizagem de máquina populares para tarefas de agrupamento e redução de dimensionalidade
+(k-means clustering, PCA, TSNE) pertencem a esta categoria.
 
 \subsubsection{Por reforço}
+Na aprendizagem por reforço, as aplicações adquirem conhecimento a respeito da tarefa ao longo do tempo por meio da obtenção
+de feedback sobre seu desempenho.
 
 \subsection{O processo de construção de um modelo de machine learning}
 \subsubsection{Análise exploratória}
