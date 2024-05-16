@@ -32,14 +32,18 @@ supervisionada e aprendizagem por reforço \cite{Bi2019}.
 
 \subsubsection{Supervisionada}
 Na aprendizagem supervisionada, a aplicação é exposta a um conjunto de dados que contém informações sobre o desfecho
-para cada uma das observações. Técnicas de aprendizagem de máquina para classificação e regressão (support vector machines,
-árvores de decisão, redes neurais) pertencem a esta categoria.
+para cada uma das observações. A informação sobre o desfecho pode ser um conjunto de variáveis ou uma única variável;
+em ambos os casos as variáveis podem representar quantidades ou categorias. O fato de a aplicação tem acesso às informações
+de desfecho, geralmente providas por um agente externo (um pesquisador que registrou os desfechos manualmente), confere o
+caráter de supervisão à este processo. Técnicas de aprendizagem de máquina para regressão e classificação (support vector
+machines, árvores de decisão, redes neurais) pertencem a esta categoria.
 
 \subsubsection{Não supervisionada}
 Na aprendizagem não supervisionada, o conjunto de dados analisado não contém informações sobre o desfecho para
-as observações. A aplicação é responsável por identificar, de maneira autônoma, os padrões de relação e similaridades existentes
-no conjunto de dados. Técnicas de aprendizagem de máquina populares para tarefas de agrupamento e redução de dimensionalidade
-(k-means clustering, PCA, TSNE) pertencem a esta categoria.
+as observações; perde-se assim a característica de supervisão. Espera-se que a aplicação identifique, de maneira
+autônoma, os padrões de relacionamento existentes entre as variáveis do conjunto de dados. Técnicas de aprendizagem de
+máquina populares para tarefas de agrupamento e redução de dimensionalidade (k-means clustering, PCA, TSNE) pertencem
+a esta categoria.
 
 \subsubsection{Por reforço}
 Na aprendizagem por reforço, as aplicações adquirem conhecimento a respeito da tarefa ao longo do tempo por meio da obtenção
