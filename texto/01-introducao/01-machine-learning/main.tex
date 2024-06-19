@@ -1,7 +1,7 @@
 \subsection{O que é aprendizagem de máquina?}
 
-Aprendizagem de máquina é a área da ciência da computação que tem como objetivo geral desenvolvimento
-de programas de computador capazes de aprender sem serem explicitamente programados \cite{Bi2019, Theobald2021}.
+Aprendizagem de máquina é a área da ciência da computação que tem como objetivo geral o desenvolvimento de programas
+de computador capazes de aprender a realizar uma tarefa sem serem explicitamente programados \cite{Bi2019, Theobald2021}.
 Neste contexto, aprendizagem refere-se a aplicação de procedimentos estatísticos e computacionais sobre um conjunto
 de informações empíricas, buscando alcançar melhorias de desempenho em uma determinada tarefa \cite{Theobald2021}.
 Aprender trata-se, portanto, de ajustar os parâmetros de um modelo estatístico e computacional aos dados observados
@@ -10,15 +10,35 @@ Programas de computador baseados em aprendizagem de máquina são capazes de ide
 entre variáveis em conjuntos de dados com alta dimensionalidade para realizar tarefas de classificação, regressão, agrupamento
 e outras \cite{Theobald2021}.
 
-Considere, por exemplo, o cenário onde tem-se um conjunto de dados provenientes de um estudo clínico; os dados
-incluem, para cada paciente, informações demográficas (idade, gênero, renda, educação), informações clínicas
-coletadas antes do tratamento (respostas observadas em entrevistas ou testes psicológicos) e informações clínicas
-coletadas após o tratamento, incluindo a avaliação final sobre a eficácia do tratamento. Uma aplicação de aprendizagem de
-máquina seria capaz de ingerir tal conjunto de dados e aprender a realizar determinadas tarefas. Uma tarefa possível
-é prever o desfecho da intervenção testada mediante a apresentação das informações demográficas e clínicas de um
-novo paciente. Outra possibilidade é utilizar padrões de similaridade no cojunto de dados para criar agrupamentos,
-facilitando a identificação de subgrupos dentro da população alvo e permitindo analisar os efeitos da intervenção
-de maneira mais assertiva para os diferentes subgrupos.
+Considere, por exemplo, um estudo observacional hipotético que investiga a relação entre características de personalidade
+e o nível de satisfação profissional entre psicólogos. O estudo baseia-se no modelo dos cinco grandes fatores da
+personalidade \cite{Hutz2018} e usa o instrumento da Bateria Fatorial da Personalidade para coleta de dados, registrando as pontuações
+obtidas nas escalas de neuroticismo, extroversão, socialização, realização e abertura \cite{}. Além disso, os participantes do
+estudo reportam o próprio nível de satisfação profissional em uma escala que contém os seguintes valores: baixo, médio e alto. O
+conjunto de dados coletados é como apresentado na tabela \ref{table:example-data}.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{llllll}
+     neuroticismo & extroversão & socialização & realização & abertura & satisfação  \\
+     \hline
+     1 & 1 & 2 & 4 & 5 & alto  \\
+     \hline
+     1 & 1 & 2 & 4 & 5 & baixo \\
+     \hline
+     1 & 1 & 2 & 4 & 5 & médio \\
+     \hline
+     1 & 1 & 2 & 4 & 5 & médio
+    \end{tabular}
+    \caption{Exemplo de dados coletados no estudo hipotético.}
+    \label{table:example-data}
+\end{table}
+
+É possível utilizar esse conjunto de dados para construir um modelo de apredizagem de máquina preditivo. Um algoritmo processa o conjunto de dados,
+identificando os padrões de interação existentes entre as variáveis preditoras (características de personalidade) e o desfecho de interesse (nível
+de satisfação profissional). O conhecimento adquirido durante o processamento dos dados é codificado nos parâmetros de um modelo de aprendizagem de
+máquina. O modelo pode então ser utilizado para fazer predições sobre o nível de satisfação profissional de um indivíduo qualquer a partir de suas
+características de personalidade.
 
 \subsection{Quais os tipos de técnicas de machine learning?}
 As diferentes técnicas de aprendizagem de máquina podem ser classificadas de acordo com a estratégia adotada
