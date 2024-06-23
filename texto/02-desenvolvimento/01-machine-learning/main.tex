@@ -4,11 +4,11 @@ Aprendizagem de máquina é a área da ciência da computação que tem como obj
 de computador capazes de aprender a realizar uma tarefa sem serem explicitamente programados \cite{Bi2019, Theobald2021}.
 Neste contexto, aprendizagem refere-se a aplicação de procedimentos estatísticos e computacionais sobre um conjunto
 de informações empíricas, buscando alcançar melhorias de desempenho em uma determinada tarefa \cite{Theobald2021}.
+
 Aprender trata-se, portanto, de ajustar os parâmetros de um modelo estatístico e computacional aos dados observados
-de modo a maximizar o desempenho na tarefa em questão \cite{Bi2019}.
-Programas de computador baseados em aprendizagem de máquina são capazes de identificar padrões de interação complexos
-entre variáveis em conjuntos de dados com alta dimensionalidade para realizar tarefas de classificação, regressão, agrupamento
-e outras \cite{Theobald2021}.
+de modo a maximizar o desempenho na tarefa em questão \cite{Bi2019}. Programas de computador baseados em aprendizagem
+de máquina são capazes de identificar padrões de interação complexos entre variáveis em conjuntos de dados com alta
+dimensionalidade para realizar tarefas de classificação, regressão, agrupamento e outras \cite{Theobald2021}.
 
 Considere, por exemplo, um estudo observacional hipotético que investiga a relação entre características de personalidade
 e o nível de satisfação profissional entre psicólogos. O estudo baseia-se no modelo dos cinco grandes fatores da personalidade
@@ -40,27 +40,29 @@ de satisfação profissional). O conhecimento adquirido durante o processamento 
 máquina. O modelo pode então ser utilizado para fazer predições sobre o nível de satisfação profissional de um indivíduo qualquer a partir de suas
 características de personalidade.
 
-\subsection{Quais os tipos de técnicas de machine learning?}
-As diferentes técnicas de aprendizagem de máquina podem ser classificadas de acordo com a estratégia adotada
-durante o processo de aprendizagem. As principais categegorias são: aprendizagem supervisionada, aprendizagem não
-supervisionada e aprendizagem por reforço \cite{Bi2019}.
+\subsection{Os tipos de aprendizagem de máquina}
+As técnicas de aprendizagem de máquina podem ser organizadas de diferentes maneiras, incluindo classificação pela estratégia adotada durante o processo
+de aprendizagem e pelo objetivo geral de aprendizagem \cite{Theobald2021, Ng2001}.
 
-\subsubsection{Supervisionada}
-Na aprendizagem supervisionada, a aplicação é exposta a um conjunto de dados que contém informações sobre o desfecho
-para cada uma das observações. A informação sobre o desfecho pode ser um conjunto de variáveis ou uma única variável;
-em ambos os casos as variáveis podem representar quantidades ou categorias. O fato de a aplicação tem acesso às informações
-de desfecho, geralmente providas por um agente externo (um pesquisador que registrou os desfechos manualmente), confere o
-caráter de supervisão à este processo. Técnicas de aprendizagem de máquina para regressão e classificação (support vector
-machines, árvores de decisão, redes neurais) pertencem a esta categoria.
+\subsubsection{Aprendizagem supervisionada, não supervisionada e por reforço}
+As categegorias mais comumente usadas na descrição de modelos de aprendizagem de máquina dizem respeito à estratégia de aprendizagem adotada. O
+modelo pode ser construído segundo uma abordagem de aprendizagem supervisionada, aprendizagem não supervisionada ou aprendizagem por reforço
+\cite{Theobald2021, Bi2019}.
 
-\subsubsection{Não supervisionada}
+A aprendizagem supervisionada assemelha-se ao processo de aprendizagem adotado por seres humanos, onde o aprendiz identifica padrões a partir de
+um conjunto de exemplos preparado por um tutor. Durante a fase de aprendizagem, o modelo é exposto a um conjunto de dados que contém informações
+sobre o desfecho de interesse para cada uma das observações \cite{Theobald2021, Bi2019}. O acesso às informações de desfecho providas por um agente
+externo confere o caráter de supervisão a este processo. Técnicas de aprendizagem de máquina para regressão e classificação (support vector machines,
+árvores de decisão, redes neurais) pertencem a esta categoria \cite{Bi2019}. Um exemplo para a aplicação deste tipo de técnica no contexto da psicologia
+clínica é o uso de dados de ensaios clínicos, onde o desfecho para cada paciente é conhecido, para a construção de um modelo capaz de predizer o
+resultado da intervenção para novos pacientes.
+
 Na aprendizagem não supervisionada, o conjunto de dados analisado não contém informações sobre o desfecho para
 as observações; perde-se assim a característica de supervisão. Espera-se que a aplicação identifique, de maneira
 autônoma, os padrões de relacionamento existentes entre as variáveis do conjunto de dados. Técnicas de aprendizagem de
 máquina populares para tarefas de agrupamento e redução de dimensionalidade (k-means clustering, PCA, TSNE) pertencem
 a esta categoria.
 
-\subsubsection{Por reforço}
 Na aprendizagem por reforço, as aplicações adquirem conhecimento a respeito da tarefa ao longo do tempo por meio da obtenção
 de feedback sobre seu desempenho.
 
