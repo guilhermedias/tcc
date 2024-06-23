@@ -51,20 +51,24 @@ modelo pode ser construído segundo uma abordagem de aprendizagem supervisionada
 
 A aprendizagem supervisionada assemelha-se ao processo de aprendizagem adotado por seres humanos, onde o aprendiz identifica padrões a partir de
 um conjunto de exemplos preparado por um tutor. Durante a fase de aprendizagem, o modelo é exposto a um conjunto de dados que contém informações
-sobre o desfecho de interesse para cada uma das observações \cite{Theobald2021, Bi2019}. O acesso às informações de desfecho providas por um agente
-externo confere o caráter de supervisão a este processo. Técnicas de aprendizagem de máquina para regressão e classificação (support vector machines,
-árvores de decisão, redes neurais) pertencem a esta categoria \cite{Bi2019}. Um exemplo para a aplicação deste tipo de técnica no contexto da psicologia
-clínica é o uso de dados de ensaios clínicos, onde o desfecho para cada paciente é conhecido, para a construção de um modelo capaz de predizer o
-resultado da intervenção para novos pacientes.
+sobre o desfecho de interesse para cada uma das observações. O acesso às informações de desfecho providas por um agente externo confere o caráter
+de supervisão a este processo. Técnicas de aprendizagem de máquina para regressão e classificação (support vector machines, árvores de decisão,
+redes neurais) pertencem a esta categoria \cite{Theobald2021, Bi2019}. Um exemplo para a aplicação deste tipo de aprendizagem é usar de dados de
+ensaios clínicos, onde o desfecho para cada paciente é conhecido, na construção de um modelo capaz de predizer o resultado da intervenção para
+novos pacientes \cite{Collins2023}.
 
-Na aprendizagem não supervisionada, o conjunto de dados analisado não contém informações sobre o desfecho para
-as observações; perde-se assim a característica de supervisão. Espera-se que a aplicação identifique, de maneira
-autônoma, os padrões de relacionamento existentes entre as variáveis do conjunto de dados. Técnicas de aprendizagem de
-máquina populares para tarefas de agrupamento e redução de dimensionalidade (k-means clustering, PCA, TSNE) pertencem
-a esta categoria.
+Na aprendizagem não supervisionada, o conjunto de dados analisado não contém qualquer informações sobre desfecho de interesse. Espera-se que o modelo
+identifique os padrões de relacionamento existentes entre as variáveis do conjunto de dados e gere agrupamentos ou projeções de maneira autônoma.
+Técnicas de aprendizagem de máquina para tarefas de agrupamento e redução de dimensionalidade (k-means clustering, PCA, TSNE) pertencem a esta categoria
+\cite{Theobald2021, Bi2019}. Um exemplo para a aplicação deste tipo de aprendizagem é investigar os padrões de comorbidade em uma determinada população
+clínica \cite{Sanchez2019}.
 
-Na aprendizagem por reforço, as aplicações adquirem conhecimento a respeito da tarefa ao longo do tempo por meio da obtenção
-de feedback sobre seu desempenho.
+Na aprendizagem por reforço, o modelo aprende através de repetidos ciclos de tentativa e erro. A cada ciclo de aprendizagem, o modelo recebe feedback sobre seu
+desempenho na tarefa, o feedback é incorporado à base de conhecimento construída pelo modelo em ciclos passados e, assim, melhora seu desempenho progressivamente
+\cite{Theobald2021, Bi2019}. Um exemplo para a aplicação deste tipo de aprendizagem é auxiliar a tomada de decisões de tratamento em condições crônicas como a
+esquizofrenia \cite{Shortreed2010}.
+
+\subsubsection{Modelos discriminativos e generativos}
 
 \subsection{A construção de uma aplicação de machine learning}
 \subsubsection{Análise descritiva}
