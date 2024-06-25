@@ -6,9 +6,10 @@ Neste contexto, aprendizagem refere-se a aplicação de procedimentos estatísti
 de informações empíricas, buscando alcançar melhorias de desempenho em uma determinada tarefa \cite{Theobald2021}.
 
 Aprender trata-se, portanto, de ajustar os parâmetros de um modelo estatístico e computacional aos dados observados
-de modo a maximizar o desempenho na tarefa em questão \cite{Bi2019}. Programas de computador baseados em aprendizagem
-de máquina são capazes de identificar padrões de interação complexos entre variáveis em conjuntos de dados com alta
-dimensionalidade para realizar tarefas de classificação, regressão, agrupamento e outras \cite{Theobald2021}.
+de modo a maximizar o desempenho na tarefa em questão. Esse processo de aprendizagem é comumente chamado de treinamento
+do modelo \cite{Bi2019}. Programas de computador baseados em aprendizagem de máquina são capazes de identificar padrões
+de interação complexos entre variáveis em conjuntos de dados com alta dimensionalidade para realizar tarefas de classificação,
+regressão, agrupamento e outras \cite{Theobald2021}.
 
 Considere, por exemplo, um estudo observacional hipotético que investiga a relação entre características de personalidade
 e o nível de satisfação profissional entre psicólogos. O estudo baseia-se no modelo dos cinco grandes fatores da personalidade
@@ -69,6 +70,17 @@ desempenho na tarefa, o feedback é incorporado à base de conhecimento constru�
 esquizofrenia \cite{Shortreed2010}.
 
 \subsubsection{Modelos discriminativos e generativos}
+
+Estratégias de aprendizagem supervisionada e não supervisionada podem ser utilizada na construção de modelos com objetivos de aprendizagem distintos. Modelos
+discriminativos tem por objetivo modelar probabilidade condicional de um desfecho dadas determinadas condições \cite{Bi2019, Ng2001}. Um modelo discriminativo,
+poderia representar diretamente a probabilidade de resposta a uma intervenção psicoterápica dadas as condicões socioeconômicas do paciente, como escolaridade e
+renda. Modelos discriminativos são comumente usados em tarefas de regresão e classificação \cite{Bi2019}.
+
+Modelos generativos buscam modelar a distribuição de probabilidade conjunta para as variáveis presentes no conjunto de dados, ou seja, a probabilidade associada
+a cada combinação de variáveis observada no conjunto de dados de treinamento \cite{Bi2019, Ng2001}. Um modelo generativo poderia, por exemplo, representar a
+probabilidade associada a cada combinação de escolaridade, renda e resposta à intervenção observada durante seu treinamento. A distribuição de probabilidade
+conjunta completa representa, em certa medida, o processo subjacente de geração dos dados, o que permite que modelos generativos sejam utilizados para gerar
+observações sintéticas \cite{Bi2019}. Esse tipo de modelo é associado a ferramentas de inteligência artificial generativa como o Chat GTP \cite{Wu2023}.
 
 \subsection{A construção de uma aplicação de machine learning}
 \subsubsection{Análise descritiva}
