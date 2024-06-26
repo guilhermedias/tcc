@@ -97,13 +97,16 @@ Uma alternativa para aumentar quantidade de dados disponíveis para treinamento 
 sua apresentação mais comum. Nesta abordagem, o conjunto de dados de treinamento é dividido em k partes de tamanhos iguais e são realizadas k rodadas de treinamento;
 a cada rodada uma das partes é separada e usada como conjunto de dados de validação. Assim, evita-se a reserva de dados exclusivos para validação \cite{Delgadillo2020}.
 
-\paragraph{Seleção do modelo}
-
-A.
-
 \paragraph{Treinamento}
 
-A.
+O treinamento consiste na implementação e execução do algoritmo de aprendizagem de máquina responsável por treinar o modelo. A implementação geralmente faz uso de
+uma linguagem de programação de alto nível e um framework de aprendizagem de máquina \cite{Greener2021}. Um exemplo de framework é o scikit-learn \cite{ScikitLearn}
+para a linguagem de programação Python \cite{Python}.
+
+O processo de treinamento envolve também a seleção de hiperparâmetros: parâmetros de configuração do algoritmo de treinamento. Hiperparâmetros recebem este nome para
+diferenciá-los dos parâmetros do modelo em construção. Os hiperparâmetros selecionados governam o processo de aprendizagem e podem ter um impacto importante no desempenho
+do modelo. A seleção de hiperparâmetros pode ser manual ou automatizada durante o processo de treinamento por meio da técnica de \textit{k-fold cross-validation}, onde,
+em cada uma das rodadas de treinamento, uma configuração de hiperparâmetros é utilizada e avaliada \cite{Delgadillo2020}.
 
 \paragraph{Avaliação do desempenho}
 
