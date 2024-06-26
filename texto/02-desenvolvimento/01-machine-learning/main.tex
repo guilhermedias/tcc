@@ -66,14 +66,8 @@ observações sintéticas \cite{Bi2019}. Esse tipo de modelo é associado a ferr
 
 \subsection{A construção de uma aplicação de machine learning}
 
-O processo para construção de modelos de aprendizagem de máquina consiste em uma sequência de estágios ordenados conforme a figura \ref{fig:processo} \cite{Greener2021}.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{./02-desenvolvimento/01-machine-learning/imagens/processo.png}
-    \caption{Estágios para a construção de um modelo de aprendizagem de máquina.}
-    \label{fig:processo}
-\end{figure}
+O processo para construção de modelos de aprendizagem de máquina pode variar de acordo com a abordagem adotada, mas, de modo geral, consiste na sequência de etapas
+de pré-processamento, separação dos dados, treinamento e avaliação de desempenho do modelo \cite{Greener2021}.
 
 \subsubsection{Pré-processamento}
 
@@ -97,7 +91,7 @@ Uma alternativa para aumentar quantidade de dados disponíveis para treinamento 
 sua apresentação mais comum. Nesta abordagem, o conjunto de dados de treinamento é dividido em k partes de tamanhos iguais e são realizadas k rodadas de treinamento;
 a cada rodada uma das partes é separada e usada como conjunto de dados de validação. Assim, evita-se a reserva de dados exclusivos para validação \cite{Delgadillo2020}.
 
-\paragraph{Treinamento}
+\subsubsection{Treinamento}
 
 O treinamento consiste na implementação e execução do algoritmo de aprendizagem de máquina responsável por treinar o modelo. A implementação geralmente faz uso de
 uma linguagem de programação de alto nível e um framework de aprendizagem de máquina \cite{Greener2021}. Um exemplo de framework é o scikit-learn \cite{ScikitLearn}
@@ -108,6 +102,6 @@ diferenciá-los dos parâmetros do modelo em construção. Os hiperparâmetros s
 do modelo. A seleção de hiperparâmetros pode ser manual ou automatizada durante o processo de treinamento por meio da técnica de \textit{k-fold cross-validation}, onde,
 em cada uma das rodadas de treinamento, uma configuração de hiperparâmetros é utilizada e avaliada \cite{Delgadillo2020}.
 
-\paragraph{Avaliação do desempenho}
+\subsubsection{Avaliação do desempenho}
 
 A.
