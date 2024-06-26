@@ -16,24 +16,6 @@ e o nível de satisfação profissional entre psicólogos. O estudo baseia-se no
 \cite{Hutz2018} e usa o instrumento da Bateria Fatorial da Personalidade para coleta de dados, registrando as pontuações obtidas
 nas escalas de neuroticismo, extroversão, socialização, realização e abertura \cite{Sancineto2015}. Além disso, os participantes
 do estudo reportam o próprio nível de satisfação profissional em uma escala que contém os seguintes valores: baixo, médio e alto.
-O conjunto de dados coletados é como apresentado na tabela \ref{tab:dados-exemplo}.
-
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{llllll}
-     neuroticismo & extroversão & socialização & realização & abertura & satisfação  \\
-     \hline
-     1 & 1 & 2 & 4 & 5 & alto  \\
-     \hline
-     1 & 1 & 2 & 4 & 5 & baixo \\
-     \hline
-     1 & 1 & 2 & 4 & 5 & médio \\
-     \hline
-     1 & 1 & 2 & 4 & 5 & médio
-    \end{tabular}
-    \caption{Exemplo de dados coletados no estudo hipotético.}
-    \label{tab:dados-exemplo}
-\end{table}
 
 É possível utilizar esse conjunto de dados para construir um modelo de apredizagem de máquina preditivo. Um algoritmo processa o conjunto de dados,
 identificando os padrões de interação existentes entre as variáveis preditoras (características de personalidade) e o desfecho de interesse (nível
@@ -99,10 +81,6 @@ O desempenho de um modelo de aprendizagem de máquina depende, em grande medida,
 uma etapa de processamento inicial para garantir que os padrões mínimos de qualidade dos dados são atendidos. Tarefas de pré-processemento comuns são imputação
 de dados faltantes, balanceamento de classes através de \textit{up-sampling} ou \textit{down-sampling}, recodificação de variáveis categóricas e padronização
 de variáveis quantitativas \cite{Delgadillo2020}.
-
-Na etapa de pré-processamento, busca-se preparar o conjunto de dados de treinamento, colocando-no em um estado adequado à técnica
-de aprendizagem de máquina que se pretende utilizar. Tratamentos comumente realizados na etapa de pré-processamento são: seleção de
-características, transformações, imputações e balanceamento de classes.
 
 \paragraph{Separação dos dados}
 
