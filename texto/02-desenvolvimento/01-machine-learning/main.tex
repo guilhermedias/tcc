@@ -75,16 +75,27 @@ O processo para construção de modelos de aprendizagem de máquina consiste em 
     \label{fig:processo}
 \end{figure}
 
-\paragraph{Pré-processamento}
+\subsubsection{Pré-processamento}
 
-O desempenho de um modelo de aprendizagem de máquina depende, em grande medida, da forma como os dados de treinamento são apresentados. Assim é fundamental
-uma etapa de processamento inicial para garantir que os padrões mínimos de qualidade dos dados são atendidos. Tarefas de pré-processemento comuns são imputação
-de dados faltantes, balanceamento de classes através de \textit{up-sampling} ou \textit{down-sampling}, recodificação de variáveis categóricas e padronização
+O desempenho de um modelo de aprendizagem de máquina depende, em grande medida, da forma como o conjunto de dados é apresentado. Assim é fundamental uma etapa
+de processamento inicial para garantir que os padrões mínimos de qualidade de dados são atendidos. Tarefas de pré-processemento comuns são imputação de dados
+faltantes, balanceamento de classes através de \textit{up-sampling} ou \textit{down-sampling}, recodificação de variáveis categóricas e padronização
 de variáveis quantitativas \cite{Delgadillo2020}.
 
-\paragraph{Separação dos dados}
+\subsubsection{Separação dos dados}
 
-A.
+Deve-se avaliar o desempenho do modelo resultante ao final do processo de aprendizagem. Uma avaliação efetiva deve verificar o comportamento do modelo quando
+exposto a um conjunto de dados inéditos, permitindo uma boa estimativa de seu desempenho em um \textit{setting} naturalístico. Assim, uma parte dos dados
+disponíveis, cerca de 10\%, deve ser reservada para a avaliação de desempenho. Esses dados são chamados conjunto de dados de teste e não devem ser usados
+em nenhuma das etapas de treinamento \cite{Greener2021}. 
+
+O processo de treinamento do modelo deve ser monitorado para evitar falhas de aprendizagem. Por exemplo, generalizações indevidas feita a partir de uma única
+observação.  O monitoramento é feito a partir de avaliações de desempenho intermediárias, que acontecem durante o treinamento. É necessário, portanto reservar
+uma parte dos dados restantes, cerca de 10\%, para fazer o monitoramento. Esses dados são chamados de dados de validação \cite{Greener2021}.
+
+Uma alternativa para aumentar quantidade de dados disponíveis para treinamento é o uso da técnica de validação cruzada, sendo a \textit{k-fold cross-validation}
+sua apresentação mais comum. Nesta abordagem, o conjunto de dados de treinamento é dividido em k partes de tamanhos iguais e são realizadas k rodadas de treinamento;
+a cada rodada uma das partes é separada e usada como conjunto de dados de validação. Assim, evita-se a reserva de dados exclusivos para validação \cite{Delgadillo2020}.
 
 \paragraph{Seleção do modelo}
 
