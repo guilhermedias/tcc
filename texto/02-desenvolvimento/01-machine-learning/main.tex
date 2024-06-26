@@ -16,7 +16,7 @@ e o nível de satisfação profissional entre psicólogos. O estudo baseia-se no
 \cite{Hutz2018} e usa o instrumento da Bateria Fatorial da Personalidade para coleta de dados, registrando as pontuações obtidas
 nas escalas de neuroticismo, extroversão, socialização, realização e abertura \cite{Sancineto2015}. Além disso, os participantes
 do estudo reportam o próprio nível de satisfação profissional em uma escala que contém os seguintes valores: baixo, médio e alto.
-O conjunto de dados coletados é como apresentado na tabela \ref{table:example-data}.
+O conjunto de dados coletados é como apresentado na tabela \ref{tab:dados-exemplo}.
 
 \begin{table}[h!]
     \centering
@@ -32,7 +32,7 @@ O conjunto de dados coletados é como apresentado na tabela \ref{table:example-d
      1 & 1 & 2 & 4 & 5 & médio
     \end{tabular}
     \caption{Exemplo de dados coletados no estudo hipotético.}
-    \label{table:example-data}
+    \label{tab:dados-exemplo}
 \end{table}
 
 É possível utilizar esse conjunto de dados para construir um modelo de apredizagem de máquina preditivo. Um algoritmo processa o conjunto de dados,
@@ -74,7 +74,7 @@ esquizofrenia \cite{Shortreed2010}.
 Estratégias de aprendizagem supervisionada e não supervisionada podem ser utilizada na construção de modelos com objetivos de aprendizagem distintos. Modelos
 discriminativos tem por objetivo modelar probabilidade condicional de um desfecho dadas determinadas condições \cite{Bi2019, Ng2001}. Um modelo discriminativo,
 poderia representar diretamente a probabilidade de resposta a uma intervenção psicoterápica dadas as condicões socioeconômicas do paciente, como escolaridade e
-renda. Modelos discriminativos são comumente usados em tarefas de regresão e classificação \cite{Bi2019}.
+renda. Modelos discriminativos são comumente usados em tarefas de regressão e classificação \cite{Bi2019}.
 
 Modelos generativos buscam modelar a distribuição de probabilidade conjunta para as variáveis presentes no conjunto de dados, ou seja, a probabilidade associada
 a cada combinação de variáveis observada no conjunto de dados de treinamento \cite{Bi2019, Ng2001}. Um modelo generativo poderia, por exemplo, representar a
@@ -83,11 +83,37 @@ conjunta completa representa, em certa medida, o processo subjacente de geraçã
 observações sintéticas \cite{Bi2019}. Esse tipo de modelo é associado a ferramentas de inteligência artificial generativa como o Chat GTP \cite{Wu2023}.
 
 \subsection{A construção de uma aplicação de machine learning}
-\subsubsection{Análise descritiva}
-\subsubsection{Pré-processamento}
+
+O processo para construção de modelos de aprendizagem de máquina consiste em uma sequência de estágios ordenados conforme a figura \ref{fig:processo} \cite{Greener2021}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{./02-desenvolvimento/01-machine-learning/imagens/processo.png}
+    \caption{Estágios para a construção de um modelo de aprendizagem de máquina.}
+    \label{fig:processo}
+\end{figure}
+
+\paragraph{Pré-processamento}
+
 Na etapa de pré-processamento, busca-se preparar o conjunto de dados de treinamento, colocando-no em um estado adequado à técnica
 de aprendizagem de máquina que se pretende utilizar. Tratamentos comumente realizados na etapa de pré-processamento são: seleção de
 características, transformações, imputações e balanceamento de classes.
+
+\paragraph{Separação dos dados}
+
+A.
+
+\paragraph{Seleção do modelo}
+
+A.
+
+\paragraph{Treinamento}
+
+A.
+
+\paragraph{Avaliação do desempenho}
+
+A.
 
 A seleção de características consiste em eliminar do conjunto de dados as variáveis que tenham pouca contribuição para a aprendizagem da tarefa.
 Em um conjunto de dados onde todas as observações são de pessoas brasileiras, a variável de nacionalidade não contribui para a explicação do desfecho
