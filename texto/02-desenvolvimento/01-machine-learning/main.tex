@@ -79,9 +79,9 @@ de variáveis quantitativas \cite{Delgadillo2020}.
 \subsubsection{Separação dos dados}
 
 Deve-se avaliar o desempenho do modelo resultante ao final do processo de aprendizagem. Uma avaliação efetiva deve verificar o comportamento do modelo quando
-exposto a um conjunto de dados inéditos, permitindo uma boa estimativa de seu desempenho em um \textit{setting} naturalístico. Assim, uma parte dos dados
-disponíveis, cerca de 10\%, deve ser reservada para a avaliação de desempenho. Esses dados são chamados conjunto de dados de teste e não devem ser usados
-em nenhuma das etapas de treinamento \cite{Greener2021}. 
+exposto a um conjunto de dados inéditos, permitindo uma boa estimativa de seu desempenho em um contexto naturalístico. Assim, uma parte dos dados disponíveis,
+cerca de 10\%, deve ser reservada para a avaliação de desempenho. Esses dados são chamados conjunto de dados de teste e não devem ser usados em nenhuma das
+etapas de treinamento \cite{Greener2021}. 
 
 O processo de treinamento do modelo deve ser monitorado para evitar falhas de aprendizagem. Por exemplo, generalizações indevidas feita a partir de uma única
 observação.  O monitoramento é feito a partir de avaliações de desempenho intermediárias, que acontecem durante o treinamento. É necessário, portanto reservar
@@ -104,4 +104,7 @@ em cada uma das rodadas de treinamento, uma configuração de hiperparâmetros �
 
 \subsubsection{Avaliação do desempenho}
 
-A.
+A avaliação do desempenho de um modelo varia de acordo com a estratégia de aprendizagem. Para modelos de aprendizagem não supervisionada, é comum a utilização de medidas de
+dispersão, homogeinedade e variância preservada \cite{Naeem2023}. Modelos de aprendizagem supervisionada que realizam tarefas de regressão são avaliados com medidas de erro
+como o erro quadrático médio \cite{Delgadillo2020}. Modelos de aprendizagem supervisionada para tarefas de classificação utilizam métricas de acurácia preditiva como a área
+sob a curva ROC \cite{Delgadillo2020}.
