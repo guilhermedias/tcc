@@ -106,7 +106,11 @@ em cada uma das rodadas de treinamento, uma configuração de hiperparâmetros �
 
 \subsubsection{Avaliação do desempenho}
 
-A avaliação do desempenho de um modelo varia de acordo com a estratégia de aprendizagem. Para modelos de aprendizagem não supervisionada, é comum a utilização de medidas de
-dispersão, homogeinedade e variância preservada \cite{Naeem2023}. Modelos de aprendizagem supervisionada que realizam tarefas de regressão são avaliados com medidas de erro
-como o erro quadrático médio \cite{Delgadillo2020}. Modelos de aprendizagem supervisionada para tarefas de classificação utilizam métricas de acurácia preditiva como a área
-sob a curva ROC \cite{Delgadillo2020}.
+A avaliação do desempenho de um modelo varia de acordo com a estratégia de aprendizagem adotada. Na abordagem de aprendizagem supervisionada é possível expor o modelo a um
+novo conjunto de dados e comparar os resultados apresentados com os desfechos reais \cite{Greener2021}. Modelos de aprendizagem supervisionada que realizam tarefas de regressão
+são avaliados com medidas de erro como o erro quadrático médio \cite{Delgadillo2020}. Modelos de aprendizagem supervisionada para tarefas de classificação utilizam métricas de
+acurácia preditiva como a área sob a curva ROC \cite{Greener2021 }.
+
+Para modelos de aprendizagem não supervisionada, a informação de desfecho não é conhecida; assim é preciso utilizar medidas de ajuste do modelo aos dados de treinamento. 
+A avaliação do desempenho de modelos de aprendizagem não supervisionada é feita comumente com a utilização de medidas de dispersão, homogeinedade e variância preservada
+\cite{Naeem2023}.
