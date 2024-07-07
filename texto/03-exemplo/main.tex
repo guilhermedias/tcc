@@ -45,14 +45,31 @@ total é calculada pela soma das pontuações obtidas para cada subescala. Resul
 
 Árvores de decisão representam uma classe de modelos de aprendizagem de máquina que pode ser usada para tarefas de classificação e regressão, ou seja, são
 capazes de fazer predições para valores de variáveis categóricas e numéricas. Elas utilizam uma série de regras de decisão para predizer o desfecho de interesse;
-essas regras consistem em verificações feitas sobre os valores de variáveis presentes no conjunto de dados de treinamento \cite{Theobald2021, Bi2019}.
+essas regras consistem em verificações feitas sobre os valores de variáveis presentes no conjunto de dados usados no treinamento do modelo \cite{Theobald2021, Bi2019}.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{./03-exemplo/imagens/arvore-exemplo.png}
-    \caption{Uma árvore de decisão hipotética para predição de resposta a determinada intervenção.}
+    \caption{Um exemplo de árvore de decisão construída manualmente.}
     \label{fig:arvore-exemplo}
 \end{figure}
+
+Na figura \ref{fig:arvore-exemplo}, temos uma árvore de decisão construída manualmente que realiza a tarefa de predição da resposta a uma intervenção psicoterápica hipotética.
+Com acesso às informações necessárias, é possível navegar pela estrutura da árvore e predizer o desfecho que a inteverção teria para uma nova paciente. Para isso, aplicam-se
+as regras de decisão sucessivamente a partir do nó inicial, chamado raiz, até alcançar um nó terminal, chamado folha, que contém a informação de desfecho.  Por exemplo,
+uma paciente de 38 anos, que estudou durante 15 anos de sua vida e tem uma renda mensal de R\$ $10.000,00$ teria uma previsão de desfecho com resposta positiva à intervenção.
+
+Algoritmos de aprendizagem de máquina para construção de árvores de decisão operam por meio de um processo iterativo: o processamento do conjunto de dados de treinamento
+acontece em ciclos que se repetem um determinado número de vezes. Partindo do conjunto de dados de treinamento completo, geram-se as regras de decisão possíveis e seleciona-se
+aquela que produz partições mais homogêneas dos dados em relação ao desfecho de interesse. As particões geradas servem como base para o próximo ciclo de processamento. O processo
+segue até que se alcance um critério de parada pré-estabelecido, como o tamanho da árvore ou um número mínimo de observações em nós terminais \cite{Bi2019}.
+
+O uso de árvores de decisão apresenta uma série de benefícios. Árvores de decisão exigem um volume de dados menor para realização do treinamento quando comparadas a outras classes
+de modelos como as redes neurais artificiais \cite{Theobald2021}. Elas são capazes de modelar relações não lineares entre as variáveis do conjunto de dados, desempenhando melhor
+que modelos de regressão linear em contextos onde esse tipo de interação existe \cite{Bi2019}. Além disso, árvore de decisão são facilmente interpretáveis; elas possuem uma representação
+gráfica que pode ser compreendida de maneira intutiva, facilitando sua inspeção e a obtenção de insights sobre o processo de tomada de decisão empregado pelo modelo \cite{Bi2019}.
+As limitações de modelos de árvore de decisão incluem sua sensibilidade a pequenas perturbações no conjunto de dados, como outliers, e uma inclinação ao sobreajuste: uma adaptação
+excessiva às nuances do conjunto de dados de treinamento que prejudica a capacidade de generalização das predições feitas pelo modelo \cite{Bi2019}.
 
 \subsection{Plano de análise de dados}
 
