@@ -1,6 +1,7 @@
 \section{Construção de um exemplo}
 
-Introdução à construção do exemplo.
+Usando dados de um ensaio clínico, construiu-se um modelo de aprendizagem de máquina para predizer o nível de resposta à intervenção sendo testada.
+Durante o processo de construção, optou-se pela utilização de técnicas simples, colocando a didática acima do desempenho preditivo.
 
 \subsection{O estudo original}
 
@@ -41,6 +42,9 @@ itens que avaliam a frequência de sintomas em uma escala Likert de 4 pontos. A 
 somáticas e problemas interpessoais. A pontuação em uma subescala é calculada pela soma das pontuações obtidas para cada item associado à subescala. A pontuação
 total é calculada pela soma das pontuações obtidas para cada subescala. Resultados maiores representam maior severidade dos sintomas depressivos \cite{Radloff1977}.
 
+O estudo também coletou informação sobre sexo, idade, nível de escolaridade e renda das participantes. As medidas foram obtidas nas ocasiões de pré-teste, pós-teste
+e 4 ocasiões de follow-up: uma semana após o pós-teste, um mês após o pós-teste, três meses após o pós-teste e seis meses após o pós-teste \cite{Woodworth2017}.
+
 \subsection{Árvores de decisão}
 
 Árvores de decisão representam uma classe de modelos de aprendizagem de máquina que pode ser usada para tarefas de classificação e regressão, ou seja, são
@@ -54,7 +58,7 @@ essas regras consistem em verificações feitas sobre os valores de variáveis p
     \label{fig:arvore-exemplo}
 \end{figure}
 
-Na figura \ref{fig:arvore-exemplo}, temos uma árvore de decisão construída manualmente que realiza a tarefa de predição da resposta a uma intervenção psicoterápica hipotética.
+Na figura \ref{fig:arvore-exemplo}, tem-se uma árvore de decisão construída manualmente que realiza a tarefa de predição da resposta a uma intervenção psicoterápica hipotética.
 Com acesso às informações necessárias, é possível navegar pela estrutura da árvore e predizer o desfecho que a inteverção teria para uma nova paciente. Para isso, aplicam-se
 as regras de decisão sucessivamente a partir do nó inicial, chamado raiz, até alcançar um nó terminal, chamado folha, que contém a informação de desfecho.  Por exemplo,
 uma paciente de 38 anos, que estudou durante 15 anos de sua vida e tem uma renda mensal de R\$ $10.000,00$ teria uma previsão de desfecho com resposta positiva à intervenção.
@@ -73,7 +77,22 @@ excessiva às nuances do conjunto de dados de treinamento que prejudica a capaci
 
 \subsection{Plano de análise de dados}
 
-A.
+Construiu-se um modelo de aprendizagem de máquina do tipo árvore de decisão para predizer melhora nos níveis de sintomas depressivos após a intervenção. Foram utilizados a linguagem
+de programação Python na versão 3.12 \cite{Python} e o pacote para processamento estatístico e de aprendizagem de máquina scikit-learn na versão 1.5 \cite{ScikitLearn}.
+
+O conjunto de dados do estudo original, que incluia observações sobre diversas ocasiões de follow-up, foi filtrado para obter somente as observações de pré-teste e pós-teste; os dados de
+pré-teste e pós-teste de cada participante foram combinados para compor uma única observação. A partir dos dados de pré-teste, foram mantidas as variáveis sociodemográficas (sexo, idade,
+nível de educação e renda), pontuação em cada item do instrumento AHI, pontuação total no instrumento AHI, pontuação em cada item do instrumento CES-D e pontuação total no instrumento CES-D.
+Para os dados de pós-teste, foi mantida a variável de pontuação total no instrumento CES-D. Observações relacionadas a participantes do grupo de controle foram descartadas. Após os tratamentos
+iniciais o conjunto de dados disponíveis para a construção do modelo tinha 102 observações.
+
+Adicionou-se uma variável catagórica para indicar melhora nos níveis de sintomas depressivos. A variável teve seu valor preenchido a partir da variação na pontuação total no instrumento CES-D:
+participantes que apresentaram um aumento de cinco pontos no pós-teste em relação ao pré-teste receberam a classificação de respondentes ao tratamento; os demais participantes receberam a
+classificação de não respondentes.
+
+Separou-se aleatoriamente $20\%$ das observações disponíveis para compor o conjunto de dados de teste; os $80\%$ restantes foram utilizados para o treinamento do modelo de árvore de decisão.
+O critério estabelecido para a seleção de regras de decisão foi o de entropia de Shannon \cite{ScikitLearn} e a profundidade máxima permitida para a árvore resultante foi de cinco níveis. O
+desempenho do modelo foi avaliado por meio da acurácia preditiva: o percentual de previsões corretas realizadas pelo modelo quando exposto ao conjunto de dados de teste.
 
 \subsection{Resultados e discussão}
 
