@@ -77,8 +77,9 @@ excessiva às nuances do conjunto de dados de treinamento que prejudica a capaci
 
 \subsection{Plano de análise de dados}
 
-Construiu-se um modelo de aprendizagem de máquina do tipo árvore de decisão para predizer melhora nos níveis de sintomas depressivos após a intervenção. Foram utilizados a linguagem
-de programação Python na versão 3.12 \cite{Python} e o pacote para processamento estatístico e de aprendizagem de máquina scikit-learn na versão 1.5 \cite{ScikitLearn}.
+Construiu-se um modelo de aprendizagem de máquina do tipo árvore de decisão para predizer melhora nos níveis de sintomas depressivos a nível individual após a intervenção.
+Foram utilizados a linguagem de programação Python na versão 3.12 \cite{Python} e o pacote para processamento estatístico e de aprendizagem de máquina scikit-learn na versão
+1.5 \cite{ScikitLearn}.
 
 O conjunto de dados do estudo original, que incluia observações sobre diversas ocasiões de follow-up, foi filtrado para obter somente as observações de pré-teste e pós-teste; os dados de
 pré-teste e pós-teste de cada participante foram combinados para compor uma única observação. A partir dos dados de pré-teste, foram mantidas as variáveis sociodemográficas (sexo, idade,
@@ -91,9 +92,36 @@ participantes que apresentaram um aumento de cinco pontos no pós-teste em rela�
 classificação de não respondentes.
 
 Separou-se aleatoriamente $20\%$ das observações disponíveis para compor o conjunto de dados de teste; os $80\%$ restantes foram utilizados para o treinamento do modelo de árvore de decisão.
-O critério estabelecido para a seleção de regras de decisão foi o de entropia de Shannon \cite{ScikitLearn} e a profundidade máxima permitida para a árvore resultante foi de cinco níveis. O
-desempenho do modelo foi avaliado por meio da acurácia preditiva: o percentual de previsões corretas realizadas pelo modelo quando exposto ao conjunto de dados de teste.
+O critério estabelecido para a seleção de regras de decisão foi o de entropia de Shannon \cite{ScikitLearn} e a profundidade máxima permitida para a árvore resultante foi de cinco níveis.
+
+Utilizou-se o modelo na predição de desfechos para o conjunto de dados de testes, mantido em separado até então, e seu desempenho foi avaliado por meio das métricas de acurácia, precisão e
+recall. Acurácia representa o percentual de predições corretas realizadas pelo modelo de modo geral. Precisão refere-se à razão entre classificações positivas corretas e o total de classificações
+positivas feitas pelo modelo. Recall refere-se à razão entre as classificações positivas corretas e o total de observações positivas no conjunto de dados de teste.
 
 \subsection{Resultados e discussão}
 
-A.
+O modelo de árvore de decisão gerado é apresentado na figura \ref{fig:arvore}. O modelo conta com 17 nós organizados em uma estrutura com cinco níveis de profundidade sendo um nó raiz, sete
+nós intermediários e nove nós folha. As regras de decisão selecionadas verificam os valores de oito variáveis distintas: a pontuação total no CES-D, a pontuação nos itens 13 e 19 do CES-D,
+a pontuação nos itens 7, 15, 20 e 22 do AHI e a renda da participante. O item 13 da CES-D diz respeito a falar menos que o usual; o item 19 do instrumento refere-se ao sentimento de não ser
+apreciado por outras pessoas. Os itens 7, 15, 20 e 22 da AHI referem-se respectivamente a sentimentos de tédio, satisfação com o trabalho, bom uso do tempo e experiências de prazer e dor.
+Além da regra de decisão selecionada, o diagrama apresenta, para cada nó, informações sobre as partições geradas durante o processo de treinamento: o número de observações que alcançaram o
+nó (samples), o nível de entropia de Shannon para as observações (entropy), a distribuição das observações entre as classes não respondente e respondente respectivamente (value) e a classe
+predominante nas observações (class). A coloração dos nós no diagrama indica a classe predita pelo modelo, com a cor laranja representando participantes não respondentes e a cor azul representando
+participantes respondentes.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{./03-exemplo/imagens/arvore.png}
+    \caption{Modelo de árvore de decisão gerado.}
+    \label{fig:arvore}
+\end{figure}
+
+A figura \ref{fig:matriz} apresenta a matriz de confusão com as classificações obtidas para o conjunto de dados de teste. O modelo construído foi capaz de predizer a melhora nos níveis de sintomas
+depressivos das participantes do conjunto de dados de teste com uma acurária de $0,714$, precisão de $0,500$ e recall de $0,833$.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./03-exemplo/imagens/matriz.png}
+    \caption{Classificações para o conjunto de dados de teste.}
+    \label{fig:matriz}
+\end{figure}
