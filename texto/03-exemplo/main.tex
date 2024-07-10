@@ -140,6 +140,8 @@ de máquina que apresenta alta capacidade de aprendizagem e grande poder prediti
 de modelos mais complexos é um problema de pesquisa em aberto e uma condição necessária para a implantação da tecnologia no contexto de atuação profissional em saúde mental \cite{Stiglic2020, WHO2023}.
 
 Observa-se que o modelo final apresenta um viés de classificação que favorece a produção de falsos positivos, a atribuição da classe respondente a pacientes que não respondem ao tratamento. O viés fica evidente
-na métrica de precisão de $50\%$: apenas metade das predições positivas produzidas pelo modelo estavam corretas. O uso de modelos com esse tipo de viés poderia resultar em um grande número de pacientes encaminhados
-para intervenções com poucas chance de sucesso. O surgimento do viés pode ser atribuído, em parte, ao pequeno número de observações disponíveis para o treinamento do modelo. Além disso, observou-se o desbalanceamento
-de classes no conjunto de dados de treinamento, com grande parte das observações sendo de pacientes não respondentes, o que pode ter prejudicado a capacidade do modelo de identificar pacientes respondentes.
+na métrica de precisão de $50\%$: apenas metade das predições positivas produzidas pelo modelo estavam corretas. O surgimento do viés pode ser atribuído, em parte, ao pequeno número de observações disponíveis para
+o treinamento do modelo. Além disso, grande parte das observações correspondiam a pacientes não respondentes, o que pode ter prejudicado a capacidade do modelo de identificar pacientes respondentes \cite{Delgadillo2020}.
+Embora algumas técnicas de balanceamento de classes possam mitigar o problema \cite{Bi2019}, uma solução definitiva envolve necessariamente a obtenção de um conjunto de dados de treinamento maior e com distribuição
+equilibrada entre as classes de desfecho \cite{Delgadillo2020}. O uso de modelos com esse tipo de viés poderia resultar em um grande número de pacientes encaminhados para intervenções com poucas chances de sucesso. O
+encaminhamento falho tem consequências econômicas e clínicas negativas como o desperdício de recursos financeiros, o adiamento de um tratamento eficaz e a exposição a potenciais efeitos negativos do tratamento \cite{John2009}. 
