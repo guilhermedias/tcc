@@ -125,3 +125,21 @@ depressivos das participantes do conjunto de dados de teste com uma acurária de
     \caption{Classificações para o conjunto de dados de teste.}
     \label{fig:matriz}
 \end{figure}
+
+Neste exemplo, buscou-se predizer melhora nos níveis de sintomas depressivos após uma intervenção de psicologia positiva via internet usando um modelo de aprendizagem de máquina do tipo árvore de
+decisão. Foi possível, mesmo com um conjunto de dados de tamanho pequeno, construir um modelo funcional e com desempenho razoável, alcançando cerca de $70\%$ de acurácia. O resultado obtido alinha-se
+com uma série achados recentes, onde, com técnicas similares, as características sociodemográficas e clínicas de pacientes foram usadas para predizer o desfecho de psicoterapia com sucesso \cite{Collins2023, Hornstein2021}.
+A incorporação desse tipo de tecnologia na prática de psicoterapia permitiria a personalização de tratamentos com maiores níveis de assertividade: com auxílio de modelos de aprendizagem de máquina, o
+psicoterapeuta poderia estimar as chances de sucesso de diversas intervenções a um custo relativamente baixo, escolhendo aquela que julgar mais adequada.
+
+O modelo construído possui uma representação gráfica intuitiva que evidencia os critérios usados no processo de classificação das observações. A capacidade de inspecionar o funcionamento do modelo
+é uma característica altamente desejável, pois permite que o psicoterapeuta use informações adicionais sobre o contexto do paciente para avaliar a qualidade da predição feitas pelo modelo, aumentando
+a confiança nas decisões clínicas tomadas com auxílio desse tipo de tecnologia \cite{Stiglic2020, WHO2023}. A capacidade de interpretar as predições é uma característica particular de alguns tipos de modelos,
+como as árvores de decisão; outras classes de modelos de aprendizagem de máquina não podem ser facilmente inspecionadas. As redes neurais artificiais, por exemplo, são uma classe de modelos de aprendizagem
+de máquina que apresenta alta capacidade de aprendizagem e grande poder preditivo, mas não oferecem transparência em relação a seu funcionamento \cite{Stiglic2020}. A possibilidade de inspecionar classes
+de modelos mais complexos é um problema de pesquisa em aberto e uma condição necessária para a implantação da tecnologia no contexto de atuação profissional em saúde mental \cite{Stiglic2020, WHO2023}.
+
+Observa-se que o modelo final apresenta um viés de classificação que favorece a produção de falsos positivos, a atribuição da classe respondente a pacientes que não respondem ao tratamento. O viés fica evidente
+na métrica de precisão de $50\%$: apenas metade das predições positivas produzidas pelo modelo estavam corretas. O uso de modelos com esse tipo de viés poderia resultar em um grande número de pacientes encaminhados
+para intervenções com poucas chance de sucesso. O surgimento do viés pode ser atribuído, em parte, ao pequeno número de observações disponíveis para o treinamento do modelo. Além disso, observou-se o desbalanceamento
+de classes no conjunto de dados de treinamento, com grande parte das observações sendo de pacientes não respondentes, o que pode ter prejudicado a capacidade do modelo de identificar pacientes respondentes.
