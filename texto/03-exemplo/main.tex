@@ -1,22 +1,22 @@
-\section{Construção de um exemplo}
+\chapter{Construção de um exemplo}
 
 Usando dados de um ensaio clínico, construiu-se um modelo de aprendizagem de máquina para predizer o nível de resposta à intervenção sendo testada.
 Durante o processo de construção, optou-se pela utilização de técnicas simples, colocando a didática acima do desempenho preditivo.
 
-\subsection{O estudo original}
+\section{O estudo original}
 
 O estudo original buscava avaliar o impacto de intervenções de psicologia positiva conduzidas via internet sobre a percepção de felicidade e
 sintomas depressivos \cite{Woodworth2017}, uma tentativa de replicar os resultados obtidos em um trabalho anterior conduzido por Seligman e
 colaboradores \cite{Seligman2005}.
 
-\subsubsection{Participantes}
+\subsection{Participantes}
 
 Os participantes foram recrutados por meio de anúncios em veículos de comunicação australianos: páginas web, jornais e uma estação de rádio
 local. Um total de 295 participantes completou a fase inicial de pré-teste. O grupo era composto majoritariamente por mulheres ($85,06\%$),
 com idades entre 18 e 83 anos ($M=43,76; SD=12,43$); a maior parte dos participantes possuia nível de educação superior ($74,88\%$) e classificou
 a própria renda como média ou acima da média ($76\%$) \cite{Woodworth2017, Collins2023}.
 
-\subsubsection{Intervenções}
+\subsection{Intervenções}
 
 Os participantes foram distribuídos aleatoriamente em quatro grupos, três grupos experimentais e um grupo de controle; cada um dos três grupos
 experimentais recebeu uma intervenção distinta. O primeiro grupo experimental recebeu a intervenção de \emph{visita da gratidão}: os participantes
@@ -26,12 +26,12 @@ suas escolhas de eventos. O último grupo experimental recebeu a intervenção d
 psicoeducativa sobre forças de caráter e foram aconselhados a buscar maneiras criativas para utilizar suas próprias forças de caráter no cotidiano.
 Todas as intervenções tiveram duração de uma semana \cite{Woodworth2017}.
 
-\subsubsection{Controle}
+\subsection{Controle}
 
 O grupo de controle foi exposto à atividade placebo de \emph{memórias de infância}: os participantes receberam a instrução de reservar um momento ao
 final do dia para escrever sobre suas memórias de infância durante uma semana \cite{Woodworth2017}.
 
-\subsubsection{Desfechos}
+\subsection{Desfechos}
 
 O estudo avaliou percepção de felicidade por meio do AHI (Authentic Happiness Inventory), um instrumento de autorrelato composto por 24 items. Os itens
 são pontuados em uma escala de que vai de 1 a 5 e a pontuação total é calculada pela soma das pontuações obtidas para cada item. Resultados maiores representam
@@ -45,7 +45,7 @@ total é calculada pela soma das pontuações obtidas para cada subescala. Resul
 O estudo também coletou informação sobre sexo, idade, nível de escolaridade e renda das participantes. As medidas foram obtidas nas ocasiões de pré-teste, pós-teste
 e 4 ocasiões de follow-up: uma semana após o pós-teste, um mês após o pós-teste, três meses após o pós-teste e seis meses após o pós-teste \cite{Woodworth2017}.
 
-\subsection{Árvores de decisão}
+\section{Árvores de decisão}
 
 Árvores de decisão representam uma classe de modelos de aprendizagem de máquina que pode ser usada para tarefas de classificação e regressão, ou seja, são
 capazes de fazer predições para valores de variáveis categóricas e numéricas. Elas utilizam uma série de regras de decisão para predizer o desfecho de interesse;
@@ -75,7 +75,7 @@ gráfica que pode ser compreendida de maneira intutiva, facilitando sua inspeç�
 As limitações de modelos de árvore de decisão incluem sua sensibilidade a pequenas perturbações no conjunto de dados, como outliers, e uma inclinação ao sobreajuste: uma adaptação
 excessiva às nuances do conjunto de dados de treinamento que prejudica a capacidade de generalização das predições feitas pelo modelo \cite{Bi2019}.
 
-\subsection{Plano de análise de dados}
+\section{Plano de análise de dados}
 
 Construiu-se um modelo de aprendizagem de máquina do tipo árvore de decisão para predizer melhora nos níveis de sintomas depressivos a nível individual após a intervenção.
 Foram utilizados a linguagem de programação Python na versão 3.12 \cite{Python} e o pacote para processamento estatístico e de aprendizagem de máquina scikit-learn na versão
@@ -98,7 +98,7 @@ Utilizou-se o modelo na predição de desfechos para o conjunto de dados de test
 recall. Acurácia representa o percentual de predições corretas realizadas pelo modelo de modo geral. Precisão refere-se à razão entre classificações positivas corretas e o total de classificações
 positivas feitas pelo modelo. Recall refere-se à razão entre as classificações positivas corretas e o total de observações positivas no conjunto de dados de teste.
 
-\subsection{Resultados e discussão}
+\section{Resultados e discussão}
 
 O modelo de árvore de decisão gerado é apresentado na figura \ref{fig:arvore}. O modelo conta com 17 nós organizados em uma estrutura com cinco níveis de profundidade sendo um nó raiz, sete
 nós intermediários e nove nós folha. As regras de decisão selecionadas verificam os valores de oito variáveis distintas: a pontuação total no CES-D, a pontuação nos itens 13 e 19 do CES-D,

@@ -1,6 +1,6 @@
-\section{Conceitos básicos de aprendizagem de máquina}
+\chapter{Conceitos básicos de aprendizagem de máquina}
 
-\subsection{O que é aprendizagem de máquina?}
+\section{O que é aprendizagem de máquina?}
 
 Aprendizagem de máquina é a área da ciência da computação que tem como objetivo geral o desenvolvimento de programas
 de computador capazes de aprender a realizar uma tarefa sem serem explicitamente programados \cite{Bi2019, Theobald2021}.
@@ -25,11 +25,11 @@ de satisfação profissional). O conhecimento adquirido durante o processamento 
 máquina. O modelo pode então ser utilizado para fazer predições sobre o nível de satisfação profissional de um indivíduo qualquer a partir de suas
 características de personalidade.
 
-\subsection{Os tipos de aprendizagem de máquina}
+\section{Os tipos de aprendizagem de máquina}
 As técnicas de aprendizagem de máquina podem ser organizadas de diferentes maneiras, incluindo classificação pela estratégia adotada durante o processo
 de aprendizagem e pelo objetivo geral de aprendizagem \cite{Theobald2021, Ng2001}.
 
-\subsubsection{Aprendizagem supervisionada, não supervisionada e por reforço}
+\subsection{Aprendizagem supervisionada, não supervisionada e por reforço}
 As categegorias mais comumente usadas na descrição de modelos de aprendizagem de máquina dizem respeito à estratégia de aprendizagem adotada. O
 modelo pode ser construído segundo uma abordagem de aprendizagem supervisionada, aprendizagem não supervisionada ou aprendizagem por reforço
 \cite{Theobald2021, Bi2019}.
@@ -53,7 +53,7 @@ desempenho na tarefa, o feedback é incorporado à base de conhecimento constru�
 \cite{Theobald2021, Bi2019}. Um exemplo para a aplicação deste tipo de aprendizagem é auxiliar a tomada de decisões de tratamento em condições crônicas como a
 esquizofrenia \cite{Shortreed2010}.
 
-\subsubsection{Modelos discriminativos e generativos}
+\subsection{Modelos discriminativos e generativos}
 
 Estratégias de aprendizagem supervisionada e não supervisionada podem ser utilizada na construção de modelos com objetivos de aprendizagem distintos. Modelos
 discriminativos tem por objetivo modelar probabilidade condicional de um desfecho dadas determinadas condições \cite{Bi2019, Ng2001}. Um modelo discriminativo,
@@ -66,19 +66,19 @@ probabilidade associada a cada combinação de escolaridade, renda e resposta à
 conjunta completa representa, em certa medida, o processo subjacente de geração dos dados, o que permite que modelos generativos sejam utilizados para gerar
 observações sintéticas \cite{Bi2019}. Esse tipo de modelo é associado a ferramentas de inteligência artificial generativa como o Chat GTP \cite{Wu2023}.
 
-\subsection{A construção de uma aplicação de machine learning}
+\section{A construção de uma aplicação de machine learning}
 
 O processo para construção de modelos de aprendizagem de máquina pode variar de acordo com a abordagem adotada, mas, de modo geral, consiste na sequência de etapas
 de pré-processamento, separação dos dados, treinamento e avaliação de desempenho do modelo \cite{Greener2021}.
 
-\subsubsection{Pré-processamento}
+\subsection{Pré-processamento}
 
 O desempenho de um modelo de aprendizagem de máquina depende, em grande medida, da forma como o conjunto de dados é apresentado. Assim é fundamental uma etapa
 de processamento inicial para garantir que os padrões mínimos de qualidade de dados são atendidos. Tarefas de pré-processemento comuns são imputação de dados
 faltantes, balanceamento de classes através de \textit{up-sampling} ou \textit{down-sampling}, recodificação de variáveis categóricas e padronização
 de variáveis quantitativas \cite{Delgadillo2020}.
 
-\subsubsection{Separação dos dados}
+\subsection{Separação dos dados}
 
 Deve-se avaliar o desempenho do modelo resultante ao final do processo de aprendizagem. Uma avaliação efetiva deve verificar o comportamento do modelo quando
 exposto a um conjunto de dados inéditos, permitindo uma boa estimativa de seu desempenho em um contexto naturalístico. Assim, uma parte dos dados disponíveis,
@@ -93,7 +93,7 @@ Uma alternativa para aumentar quantidade de dados disponíveis para treinamento 
 sua apresentação mais comum. Nesta abordagem, o conjunto de dados de treinamento é dividido em k partes de tamanhos iguais e são realizadas k rodadas de treinamento;
 a cada rodada uma das partes é separada e usada como conjunto de dados de validação. Assim, evita-se a reserva de dados exclusivos para validação \cite{Delgadillo2020}.
 
-\subsubsection{Treinamento}
+\subsection{Treinamento}
 
 O treinamento consiste na implementação e execução do algoritmo de aprendizagem de máquina responsável por treinar o modelo. A implementação geralmente faz uso de
 uma linguagem de programação de alto nível e um framework de aprendizagem de máquina \cite{Greener2021}. Um exemplo de framework é o scikit-learn \cite{ScikitLearn}
@@ -104,7 +104,7 @@ diferenciá-los dos parâmetros do modelo em construção. Os hiperparâmetros s
 do modelo. A seleção de hiperparâmetros pode ser manual ou automatizada durante o processo de treinamento por meio da técnica de \textit{k-fold cross-validation}, onde,
 em cada uma das rodadas de treinamento, uma configuração de hiperparâmetros é utilizada e avaliada \cite{Delgadillo2020}.
 
-\subsubsection{Avaliação do desempenho}
+\subsection{Avaliação do desempenho}
 
 A avaliação do desempenho de um modelo varia de acordo com a estratégia de aprendizagem adotada. Na abordagem de aprendizagem supervisionada é possível expor o modelo a um
 novo conjunto de dados e comparar os resultados apresentados com os desfechos reais \cite{Greener2021}. Modelos de aprendizagem supervisionada que realizam tarefas de regressão

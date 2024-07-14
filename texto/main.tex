@@ -1,11 +1,367 @@
-\documentclass{article}
+\documentclass[
+	% Opções da classe memoir
+	12pt,				        % tamanho da fonte
+	openany,			        % capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			        % para impressão em recto e verso. Oposto a oneside
+	a4paper,			        % tamanho do papel. 
+	% Opções da classe abntex2
+	%chapter=TITLE,		        % títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		        % títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	        % títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,       % títulos de subsubseções convertidos em letras maiúsculas
+	% Opções do pacote babel
+	english,			        % idioma adicional para hifenização
+	brazil				        % o último idioma é o principal do documento
+	]{abntex2}
 
-\usepackage{biblatex}
-\usepackage{graphicx}
+% ---
+% Pacotes básicos 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+% ---
+		
 
-\addbibresource{references.bib}
+% ---
+% Pacotes de citações
+% ---
+% \usepackage[alf]{abntex2cite}						% Citações padrão ABNT
+\usepackage[alf, abnt-nbr10520=1988]{abntex2cite}	% Citações em sentence case
 
+
+% ---
+% Informações para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Aprendizagem de máquina para previsão de desfechos em saúde mental: uma introdução para psicólogos}
+\autor{Guilherme Augusto Dias}
+\local{Porto Alegre}
+\data{2024}
+\orientador{Prof. Dr. Wagner de Lara Machado}
+% \coorientador{}
+% \instituicao{
+%   Pontifícia Universidade Católica do Rio Grande do Sul
+%   \par
+%   Escola de Ciências da Saúde e da Vida
+%   \par
+%   Curso de Psicologia}
+\tipotrabalho{TCC}
+\preambulo{Trabalho de Conclusão de Curso apresentado como requisito para a obtenção do grau de Bacharel em Psicologia pela Escola de Ciências da Saúde e da Vida da Pontifícia Universidade Católica do Rio Grande do Sul.}
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+% ---
+
+% Alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% Informações do PDF
+\makeatletter
+\hypersetup{
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,		% true: colored links; false: boxed links
+    	linkcolor=black,		% color of internal links
+    	citecolor=black,		% color of links to bibliography
+    	filecolor=black,		% color of file links
+		urlcolor=black,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+
+% ---
+% Posiciona figuras e tabelas no topo da página quando adicionadas sozinhas
+% em um página em branco. Ver https://github.com/abntex/abntex2/issues/170
+\makeatletter
+\setlength{\@fptop}{5pt} % Set distance from top of page to first float
+\makeatother
+% ---
+
+% ---
+% Possibilita criação de Quadros e Lista de quadros.
+% Ver https://github.com/abntex/abntex2/issues/176
+%
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% Configurações para atender às regras da ABNT
+\setfloatadjustment{quadro}{\centering}
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+\setfloatlocations{quadro}{hbtp} % Ver https://github.com/abntex/abntex2/issues/176
+% ---
+
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ---
+% Compila o índice
+% ---
+\makeindex
+% ---
+
+
+% ----
+% Início do documento
+% ----
 \begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+\pretextual
+
+% ---
+% CAPA
+% ---
+\imprimircapa
+% ---
+
+
+% ---
+% FOLHA DE ROSTO
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+\imprimirfolhaderosto
+% ---
+
+
+% ---
+% Ficha bibliografica
+% ---
+
+% Isto é um exemplo de Ficha Catalográfica, ou ``Dados internacionais de
+% catalogação-na-publicação''. Você pode utilizar este modelo como referência. 
+% Porém, provavelmente a biblioteca da sua universidade lhe fornecerá um PDF
+% com a ficha catalográfica definitiva após a defesa do trabalho. Quando estiver
+% com o documento, salve-o como PDF no diretório do seu projeto e substitua todo
+% o conteúdo de implementação deste arquivo pelo comando abaixo:
+%
+% \usepackage{pdfpages}		% necessário para comando \includepdf
+% \begin{fichacatalografica}
+%     \includepdf{fig_ficha_catalografica.pdf}
+% \end{fichacatalografica}
+
+% \begin{fichacatalografica}
+% 	\sffamily
+% 	\vspace*{\fill}                             % Posição vertical
+% 	\begin{center}                              % Minipage Centralizado
+% 	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
+% 	\small
+% 	\imprimirautor
+% 	%Sobrenome, Nome do autor
+	
+% 	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
+% 	\imprimirlocal, \imprimirdata-
+	
+% 	\hspace{0.5cm} \thelastpage p. : il. (algumas color.) ; 30 cm.\\
+	
+% 	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
+	
+% 	\hspace{0.5cm}
+% 	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
+% 	\imprimirdata.}\\
+	
+% 	\hspace{0.5cm}
+% 		1. Palavra-chave1.
+% 		2. Palavra-chave2.
+% 		2. Palavra-chave3.
+% 		I. Orientador.
+% 		II. Universidade xxx.
+% 		III. Faculdade de xxx.
+% 		IV. Título 			
+% 	\end{minipage}}
+% 	\end{center}
+% \end{fichacatalografica}
+% ---
+
+
+% ---
+% FOLHA DE APROVAÇÃO
+% ---
+
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca com o comando abaixo:
+%
+% \begin{folhadeaprovacao}
+% \includepdf{folhadeaprovacao_final.pdf}
+% \end{folhadeaprovacao}
+%
+\begin{folhadeaprovacao}
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vspace*{1.5cm}
+
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+    \end{center}
+
+    \vspace*{1.5cm}
+    
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+        \imprimirpreambulo
+    \end{minipage}%
+   \end{center}
+
+   \vspace*{1.5cm}
+        
+   \begin{center}
+   Aprovado em 17 de julho de 2024.
+
+   \vspace*{1.5cm}
+
+   Banca examinadora:
+   \end{center}
+
+%    \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+   \assinatura{\textbf{Professor} \\ Convidado 1}
+   \assinatura{\textbf{Professor} \\ Convidado 2}
+   \vspace*{1.5cm}
+\end{folhadeaprovacao}
+% ---
+
+
+% ---
+% Agradecimentos
+% ---
+\begin{agradecimentos}
+Valeu!
+\end{agradecimentos}
+% ---
+
+
+% ---
+% RESUMOS
+% ---
+% Resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+Desenvolvimentos na área de aprendizagem de máquina representam uma série de oportunidades para diversas áreas de pesquisa e de atuação profissional.
+O uso de modelos de aprendizagem de máquina na predição de desfecho para tratamentos em saúde mental tem sido investigado e apresenta resultados promissores.
+A aplicação desse tipo de modelo possibilitaria, por exemplo, maior assertividade na personalização de tratamentos psicoterápicos a nível individual.
+Apesar dos benefícios potenciais, o tema ainda é pouco discutido nos espaços de pesquisa, formação e atuação em psicologia clínica. Este trabalho tem
+por objetivo introduzir o tema de aprendizagem de máquina a psicólogos. Busca-se apresentar, de maneira acessível, os conceitos e terminologia básicos
+em aprendizagem de máquina, proporcionando um panorama geral da área. Para complementar a exposição conceitual, é construído um exemplo a partir de dados
+de um estudo sobre eficácia de intervenções em psicologia positiva para depressão via internet. Por fim, discutem-se algumas implicações do uso desse tipo
+de tecnologia para a pesquisa e para a prática em psicoterapia.
+
+ \textbf{Palavras-chave}: aprendizagem de máquina, psicoterapia, psicologia positiva, depressão.
+\end{resumo}
+
+% Resumo em inglês
+\begin{resumo}[Abstract]
+ \begin{otherlanguage*}{english}
+   Developments in area of machine learning represent a series of opportunities for different areas of research and professional activity. The use of machine
+   learning models in predicting outcomes for mental health treatments has been investigated and shows promising results. The application of this type of model would
+   enable, for example, greater assertiveness in the personalization of psychotherapeutic treatments at an individual level. Despite the potential benefits, the topic
+   is still little discussed in research, training and practice in clinical psychology. This work aims to introduce the topic of machine learning to psychologists. The
+   aim is to present, in an accessible way, the basic concepts and terminology in machine learning, providing a general overview of the area. To complement the conceptual
+   exposition, an example is constructed based on data from a study on the effectiveness of positive psychology interventions for depression via the internet. Finally,
+   some implications of using this type of technology for research and practice in psychotherapy are discussed.
+   \vspace{\onelineskip}
+ 
+   \noindent 
+   \textbf{Keywords}: machine learning, psychotherapy, positive psychology, depression.
+ \end{otherlanguage*}
+\end{resumo}
+
+
+% ---
+% LISTA DE ILUSTRAÇÕES
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+
+% ---
+% LISTA DE QUADROS
+% ---
+% \pdfbookmark[0]{\listofquadrosname}{loq}
+% \listofquadros*
+% \cleardoublepage
+% ---
+
+
+% ---
+% LISTA DE TABELAS
+% ---
+% \pdfbookmark[0]{\listtablename}{lot}
+% \listoftables*
+% \cleardoublepage
+% ---
+
+
+% ---
+% LISTA DE ABREVIATURAS E SIGLAS
+% ---
+% \begin{siglas}
+%   \item[ABNT] Associação Brasileira de Normas Técnicas
+%   \item[abnTeX] ABsurdas Normas para TeX
+% \end{siglas}
+% ---
+
+
+% ---
+% LISTA DE SÍMBOLOS
+% ---
+% \begin{simbolos}
+%   \item[$ \Gamma $] Letra grega Gama
+%   \item[$ \Lambda $] Lambda
+%   \item[$ \zeta $] Letra grega minúscula zeta
+%   \item[$ \in $] Pertence
+% \end{simbolos}
+% ---
+
+
+% ---
+% Sumário
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
 
 \include{./01-introducao/main.tex}
 
@@ -15,6 +371,82 @@
 
 \include{./04-conclusao/main.tex}
 
-\printbibliography
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+% ----------------------------------------------------------
 
+
+% ----------------------------------------------------------
+% REFERÊNCIAS
+% ----------------------------------------------------------
+\bibliography{references.bib}
+
+
+% ----------------------------------------------------------
+% GLOSSÁRIO
+% ----------------------------------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+% ----------------------------------------------------------
+% APÊNDICES
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+% \begin{apendicesenv}
+
+% % Imprime uma página indicando o início dos apêndices
+% \partapendices
+
+% % ----------------------------------------------------------
+% \chapter{Quisque libero justo}
+% % ----------------------------------------------------------
+
+% % ----------------------------------------------------------
+% \chapter{Nullam elementum urna}
+% % ----------------------------------------------------------
+
+% \end{apendicesenv}
+% ---
+
+
+% ----------------------------------------------------------
+% ANEXOS
+% ----------------------------------------------------------
+
+% ---
+% Inicia os anexos
+% ---
+% \begin{anexosenv}
+
+% % Imprime uma página indicando o início dos anexos
+% \partanexos
+
+% % ---
+% \chapter{Morbi ultrices rutrum lorem}
+% % ---
+
+% % ---
+% \chapter{Cras non urna sed feugiat cum}
+% % ---
+
+
+% % ---
+% \chapter{Fusce facilisis lacinia dui}
+% % ---
+
+% \end{anexosenv}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+% \phantompart
+% \printindex
+%---------------------------------------------------------------------
 \end{document}
