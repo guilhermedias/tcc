@@ -35,10 +35,16 @@
 
 
 % ---
+% Pacotes adicionais
+% ---
+\usepackage{pdfpages}	% Inclusão de páginas em PDF
+
+
+% ---
 % Informações para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Aprendizagem de máquina para previsão de desfechos em saúde mental: uma introdução para psicólogos}
-\autor{Guilherme Augusto Dias}
+\titulo{APRENDIZAGEM DE MÁQUINA PARA PREDIÇÃO DE DESFECHOS EM SAÚDE MENTAL: \textmd{UMA INTRODUÇÃO PARA PSICÓLOGOS}}
+\autor{GUILHERME AUGUSTO DIAS}
 \local{Porto Alegre}
 \data{2024}
 \orientador{Prof. Dr. Wagner de Lara Machado}
@@ -144,7 +150,7 @@
 % ---
 % CAPA
 % ---
-\imprimircapa
+\includepdf{./05-extras/capa.pdf}
 % ---
 
 
@@ -453,4 +459,5 @@ de tecnologia para a pesquisa e para a prática em psicoterapia.
 % \phantompart
 % \printindex
 %---------------------------------------------------------------------
+\includepdf{./05-extras/contracapa.pdf}
 \end{document}
